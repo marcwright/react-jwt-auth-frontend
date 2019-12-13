@@ -7,6 +7,7 @@ import {
 import axios from 'axios'
 
 import NavBar from '../NavBar/NavBar'
+import Heading from '../Heading/Heading'
 import SignUpForm from '../SignUpForm/SignUpForm'
 import LogInForm from '../LogInForm/LogInForm'
 import LogOut from '../LogOut/LogOut'
@@ -160,8 +161,11 @@ class App extends Component {
               }}
             />
           </Switch>
+              <Heading />
+          
+
         </div>
-      </div>
+       </div>
     )
   }
 }

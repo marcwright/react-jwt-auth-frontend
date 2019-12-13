@@ -17,8 +17,8 @@ class NavBar extends Component {
       navBarItems.push(<NavItem key={4} href='/login'>Log In</NavItem>)
     }
     return (
-      <Navbar brand='Project 4 React Starter' className='nav' right>
-
+      <Navbar brand='reelTalk' className='nav' right>
+        <img src="#" alt="logo" className='logo'/>
         {navBarItems}
       </Navbar>
     )
