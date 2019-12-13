@@ -5,10 +5,10 @@ import './SignUpForm.css'
 class SignUpForm extends Component {
   render () {
     return (
-      <div>
-        <h2>Sign Up</h2>
+      <div className='signup-wrap'>
+        <h2>SIGN UP</h2>
 
-        <form>
+        <form className='form'>
           <div>
             <label htmlFor='email'>Email</label>
             <input type='text' name='email' onChange={this.props.handleInput} />
@@ -18,7 +18,7 @@ class SignUpForm extends Component {
             <label htmlFor='password'>Password</label>
             <input type='text' name='password' onChange={this.props.handleInput} />
           </div>
-          <input value='Submit' type='submit' onClick={this.props.handleSignUp} />
+          <input className='submit' value='Submit' type='submit' onClick={this.props.handleSignUp} />
         </form>
       </div>
     )

@@ -8,11 +8,12 @@ import {
 import axios from 'axios'
 
 import NavBar from '../NavBar/NavBar'
-import Heading from '../Heading/Heading'
+import Landing from '../Landing/Landing'
 import SignUpForm from '../SignUpForm/SignUpForm'
 import LogInForm from '../LogInForm/LogInForm'
 import LogOut from '../LogOut/LogOut'
 import Profile from '../Profile/Profile'
+import Explore from '../ExploreClubs/Explore'
 import './App.css'
 
 const databaseUrl = process.env.NODE_ENV === 'production' ? process.env.BACKEND_APP_URL : 'http://localhost:3000'
@@ -161,7 +162,7 @@ class App extends Component {
                 )
               }}
             />
-            <Route path="/" component={Heading} />
+            <Route path="/" component={Landing} />
           </Switch>
           
               
