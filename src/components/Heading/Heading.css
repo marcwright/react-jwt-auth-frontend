@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 400;
     line-height: 1.7;
     padding: 0;
@@ -57,8 +57,9 @@ header {
     display: block;
     font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 3.5rem;
-    margin-bottom: 4rem;
+    letter-spacing: 2rem;
+    margin-bottom: 3rem;
+    font-family: 'Fjalla One', sans-serif;
 
     animation-name: moveInLeft;
     animation-duration: 2s;
@@ -114,7 +115,7 @@ header {
   }
 
   .btn-wrap {
-      margin-right: 4rem;
+      margin-right: 3rem;
   }
 
   .button:link,
@@ -127,7 +128,7 @@ header {
     transition: all 0.2s;
     position: relative;
     font-size: 1.6rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 
   .button:hover {
@@ -141,8 +142,8 @@ header {
   }
 
   .button--white {
-    background-color: #fff;
-    color: #777;
+    background-color: rgb(218, 66, 66);
+    color: rgb(238, 238, 238);
   }
 
   .button::after {
@@ -159,7 +160,7 @@ header {
   }
 
   .button--white::after {
-    background-color: #fff;
+    background-color: rgb(195, 64, 64);
   }
 
   .button:hover::after {

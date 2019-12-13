@@ -14,12 +14,12 @@ class Heading extends Component {
 
             <div class="header__text-box">
                 <h1 class="heading-primary">
-                    <span class="heading-primary--main">Film</span>
+                    <span class="heading-primary--main">Cinema</span>
                     <span class="heading-primary--sub">ReelTalk is a place for movie lovers to form groups based on their common interests and discuss all topics related to film and televison.</span>
                 </h1>
                 <div className='btn-wrap'>
-                <a href="#" class="button button--white button--animated">Try</a>
-                <a href="#" class="button button--white button--animated">Explore</a>
+                <a href="/signup" class="button button--white button--animated">Try</a>
+                <a href="/login" class="button button--white button--animated">Explore</a>
                 </div>
             </div>
         </div>

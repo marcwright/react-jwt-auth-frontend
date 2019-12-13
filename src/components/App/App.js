@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import {
   Route,
   Switch,
-  withRouter
+  withRouter, 
+  Router
 } from 'react-router-dom'
 import axios from 'axios'
 
@@ -160,8 +161,10 @@ class App extends Component {
                 )
               }}
             />
+            <Route path="/" component={Heading} />
           </Switch>
-              <Heading />
+          
+              
           
 
         </div>

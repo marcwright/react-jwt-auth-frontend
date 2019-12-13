@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Navbar, NavItem } from 'react-materialize'
 import './NavBar.css'
+import logo from './logo.png'
 
 class NavBar extends Component {
 
@@ -17,8 +18,8 @@ class NavBar extends Component {
       navBarItems.push(<NavItem key={4} href='/login'>Log In</NavItem>)
     }
     return (
-      <Navbar brand='reelTalk' className='nav' right>
-        <img src="#" alt="logo" className='logo'/>
+      <Navbar   brand='reelTalk' className='nav' right>
+        {/* <img src={logo} alt="logos" className='logo'/> */}
         {navBarItems}
       </Navbar>
     )
