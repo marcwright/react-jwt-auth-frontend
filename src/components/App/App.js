@@ -162,7 +162,8 @@ class App extends Component {
                 )
               }}
             />
-            <Route path="/" component={Landing} />
+            <Route exact path="/" component={Landing} />
+            <Route path='/explore' component={Explore} databaseUrl={databaseUrl} />
           </Switch>
           
               

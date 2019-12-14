@@ -6,11 +6,11 @@ h2 {
     padding-top: 5rem;
     font-family: 'Fjalla One', sans-serif;
 }
+
+
 form {
     margin: 0 30% 0 30%;
     border: 2px solid red;
-   
-
 }
 
 label {
@@ -41,6 +41,4 @@ input {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-
-
 }
