@@ -61,9 +61,7 @@ header {
     margin-bottom: 3rem;
     font-family: 'Fjalla One', sans-serif;
 
-    animation-name: moveInLeft;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
+    animation: moveInbuttonon 5s ease-out;
 }
 
 .heading-primary--sub {
@@ -72,7 +70,7 @@ header {
     font-weight: 700;
     letter-spacing: .5rem;
 
-    animation: moveInRight 2s ease-out;
+    animation: moveInbuttonon 5s ease-out;
 }
 
 @keyframes moveInLeft {
@@ -106,7 +104,7 @@ header {
   @keyframes moveInbuttonon {
     0% {
       opacity: 0;
-      transform: translateY(3rem);
+      transform: translateY(50rem);
     }
     100% {
       opacity: 1;
@@ -114,9 +112,7 @@ header {
     }
   }
 
-  .btn-wrap {
-      margin-right: 3rem;
-  }
+
 
   .button:link,
   .button:visited {
@@ -128,7 +124,7 @@ header {
     transition: all 0.2s;
     position: relative;
     font-size: 1.6rem;
-    margin-left: 1rem;
+    font-family: 'Fjalla One', sans-serif;
   }
 
   .button:hover {
@@ -142,8 +138,8 @@ header {
   }
 
   .button--white {
-    background-color: rgb(218, 66, 66);
-    color: rgb(238, 238, 238);
+    background-color: #c0ab65;
+    color: #024C8A;
   }
 
   /* .btn2 {
@@ -164,7 +160,7 @@ header {
   }
 
   .button--white::after {
-    background-color: rgb(195, 64, 64);
+    background-color: #998541;
   }
 
   .button:hover::after {
@@ -173,7 +169,20 @@ header {
   }
 
   .button--animated {
-    animation: moveInbuttonon 2s ease-out 0.75s;
+    animation: moveInbuttonon 6s ease-out .75s;
     /* applies the 0% keyfram before the animation starts  */
     animation-fill-mode: backwards;
+  }
+
+  .button.btn2.button--white.button--animated {
+    padding: 1rem 4rem;
+    margin-left: 1rem;
+  }
+
+  .button.button--white.button--animated {
+    padding: 1rem 5rem;
+  }
+
+  .btn-wrap {
+    margin-left: -2.5rem;
   }
