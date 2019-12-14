@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Navbar, NavItem } from 'react-materialize'
 import './NavBar.css'
-import logo from './logo.png'
+import logo from './logo4.png'
 
 class NavBar extends Component {
 

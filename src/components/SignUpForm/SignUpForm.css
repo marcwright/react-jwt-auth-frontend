@@ -33,10 +33,10 @@ input {
     height: 95vh;
     background-image: linear-gradient(
         to right bottom,
-        rgba(73, 158, 255, .9),
-        rgba(2, 49, 136, .9)
+        rgba(82, 163, 255, 1),
+        rgba(0, 27, 77, 0.751)
     ),
-    url(./signupBackground.jpg);
+    url(./background3.jpg);
 
     background-size: cover;
     background-repeat: no-repeat;
