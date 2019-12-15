@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter, Router } from "react-router-dom";
 import axios from "axios";
-
+import 'materialize-css/dist/css/materialize.min.css'
 import NavBar from "../NavBar/NavBar";
 import Landing from "../Landing/Landing";
 import SignUpForm from "../SignUpForm/SignUpForm";

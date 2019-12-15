@@ -1,0 +1,8 @@
+.login-wrap {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(82, 163, 255, 0.7),
+        rgba(0, 27, 77, 0.851)
+    );
+}

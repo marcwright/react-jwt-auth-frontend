@@ -1,43 +1,12 @@
-.card-wrapper {
-    display: flex;
-    border: 1px solid red;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    height: 95vh;
-    padding-top: 5rem;
+/* .card-action {
+    height: 4rem;
+} */
+
+.link {
+    font-size: 1rem;
 }
 
-.ClubCard {
-    background: #636e8d;
-    /* border: 1px solid red; */
-    margin: 1rem;
-    font-family: sans-serif;
-    font-size: .7rem;
-    text-align: center;
-    border-radius: 10px;
-    border: 2px solid rgb(65, 65, 65);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    position: relative;
-    flex: 0 0 auto;
-    padding: 2rem;
-    height: 55vh;
-}
-
-.ClubCard:hover {
-    padding: 5rem;
-    margin: 2rem;
-    transform: scale(1.5); 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.image {
-    display: block;
-    height: 35rem;
-    width: 25rem;
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-top: 1rem;
-    background-color: blue;
-}
-
+/* .card-image {
+    height: 20rem;
+    width: 10rem;
+} */

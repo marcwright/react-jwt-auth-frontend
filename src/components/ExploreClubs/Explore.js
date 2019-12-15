@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ClubCard from "../ClubCard/ClubCard";
+import "./Explore.css";
+import 'materialize-css/dist/css/materialize.min.css'
 
 class Explore extends Component {
   state = {

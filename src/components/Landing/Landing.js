@@ -9,9 +9,9 @@ class Landing extends Component {
 
         <div className="header__text-box">
           <h1 className="heading-primary">
-            <span className="heading-primary--main">Cinema</span>
+            {/* <span className="heading-primary--main">Movie Lovers</span> */}
             <span className="heading-primary--sub">
-              ReelTalk is a place for movie lovers to form groups based on their
+              Film Club is a place for movie lovers to form groups based on their
               common interests and discuss all topics related to film and
               televison.
             </span>

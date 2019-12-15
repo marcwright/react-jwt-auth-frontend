@@ -5,7 +5,7 @@ import './LogInForm.css'
 class LogInForm extends Component {
   render () {
     return (
-      <div>
+      <div className='login-wrap'>
         <h2>Log In</h2>
 
         <form>

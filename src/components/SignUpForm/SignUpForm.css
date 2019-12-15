@@ -1,4 +1,4 @@
-h2 {
+/* h2 {
     margin: 0;
     text-align: center;
     color: white;
@@ -8,12 +8,13 @@ h2 {
 }
 
 
+
 form {
     margin: 0 30% 0 30%;
     border: 2px solid red;
 }
 
-label {
+/* label {
     color: white;
     font-size: 2rem;
 }
@@ -21,24 +22,25 @@ label {
 input {
     color: white;
     font-size: 2rem;
+} */
+
+.section {
+    padding-top: 6vw;
+    padding-bottom: 4vw;
+    font-size: 2rem;
 }
 
 .submit {
     color: white;
     background-color: tomato;
     margin: 0 auto;
-}
+} 
 
-.signup-wrap {
+/* .signup-wrap {
     height: 95vh;
     background-image: linear-gradient(
         to right bottom,
-        rgba(82, 163, 255, 1),
-        rgba(0, 27, 77, 0.751)
-    ),
-    url(./background3.jpg);
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+        rgba(82, 163, 255, 0.7),
+        rgba(0, 27, 77, 0.851)
+    );
+} */

@@ -1,25 +1,25 @@
 import React, { Component } from 'react'
 import { Navbar, NavItem } from 'react-materialize'
 import './NavBar.css'
-import logo from './logo4.png'
 
 class NavBar extends Component {
 
   render() {
-    let navBarItems = [<NavItem key={1} href='/'>Home</NavItem>]
+    let navBarItems = []
     if (this.props.isLoggedIn) {
-      navBarItems.push(<NavItem key={2} href='/logout'>Log Out</NavItem>)
+      navBarItems.push(<NavItem key={2} href='/logout'>LOG OUT</NavItem>)
       if (this.props.user != null) {
         navBarItems.push(<NavItem key={5} href='/profile'>{this.props.user.email}</NavItem>)
       }
 
     } else {
-      navBarItems.push(<NavItem key={3} href='/signup'>Sign Up</NavItem>)
-      navBarItems.push(<NavItem key={4} href='/login'>Log In</NavItem>)
+      navBarItems.push(<NavItem key={3} href='/signup'>SIGN UP</NavItem>)
+      navBarItems.push(<NavItem key={4} href='/login'>LOG IN</NavItem>)
+      navBarItems.push(<NavItem key={4} href='/explore'>CLUBS</NavItem>)
+      navBarItems.push(<NavItem key={4} href="/explore">MOVIES</NavItem>)
     }
     return (
-      <Navbar   brand='reelTalk' className='nav' right>
-        {/* <img src={logo} alt="logos" className='logo'/> */}
+      <Navbar brand='FILM CLUB' className='nav' right>
         {navBarItems}
       </Navbar>
     )
@@ -27,3 +27,11 @@ class NavBar extends Component {
 }
 
 export default NavBar
+
+
+// } else {
+    //   navBarItems.push(<NavItem key={3} href='/signup'>SIGN UP</NavItem>)
+    //   navBarItems.push(<NavItem key={4} href='/login'>LOG IN</NavItem>)
+    //   navBarItems.push(<NavItem key={4} href='/login'>MOVIES</NavItem>)
+    //   navBarItems.push(<NavItem key={4} href="/explore">CLUBS</NavItem>)
+    // }
