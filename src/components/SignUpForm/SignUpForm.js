@@ -37,6 +37,11 @@ class SignUpForm extends Component {
             <input id="text" type='text'></input>
             <label for="message">Password:</label>
           </div>
+          <div className='input-field'>
+            <i className='material-icons prefix'>edit</i>
+            <textarea id='favorites' className='materialize-textarea' cols='20' rows='20'></textarea>
+            <label for='favorites'>Name some of your favorite movies and television shows?</label>
+          </div>
           <button className='btn waves-effect waves-light' type='submit' name='action'>
             Submit
           </button>
