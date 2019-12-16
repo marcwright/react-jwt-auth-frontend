@@ -30,7 +30,7 @@ class SignUpForm extends Component {
             <div className="col s12 l5 offset-l2 form-wrap">
               <form>
                 <div className="input-field">
-                  <i className="material-icons prefix">person</i>
+                  <i className="material-icons prefix">account_circle</i>
                   <input type="text" id="text" />
                   <label className="label" for="name">
                     Username:
@@ -87,7 +87,7 @@ class SignUpForm extends Component {
                   >
                     Submit
                   </button>
-                  <p className='login-message'>Already a member? <a href='#'>Login</a></p>
+                  <p className='login-message'>Already a member? <a href='/login'>Login</a></p>
                 </div>
                 
               </form>

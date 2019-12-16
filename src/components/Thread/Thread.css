@@ -1,0 +1,9 @@
+#thread-area {
+    background-color: tomato;
+    height: 100vh;
+}
+
+#response-area {
+    background-color: teal;
+    height: 100vh;
+}

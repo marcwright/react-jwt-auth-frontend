@@ -10,6 +10,7 @@ import LogOut from "../LogOut/LogOut";
 import Profile from "../Profile/Profile";
 import Explore from "../ExploreClubs/Explore";
 import CreateClub from "../CreateClub/CreateClub";
+import Thread from "../Thread/Thread";
 import "./App.css";
 
 const databaseUrl =
@@ -186,6 +187,11 @@ class App extends Component {
             <Route
               path="/CreateClub"
               component={CreateClub}
+              databaseUrl={databaseUrl}
+            />
+            <Route
+              path="/Thread"
+              component={Thread}
               databaseUrl={databaseUrl}
             />
           </Switch>

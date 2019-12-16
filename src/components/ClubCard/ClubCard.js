@@ -30,8 +30,11 @@ class ClubCard extends Component {
                   </p>
                 </div>
                 <div className="card-action">
+                <a className="link" href="https://google.com" alt="test">
+                    <i className="material-icons right">arrow_forward</i>
+                  </a>
                   <a className="link" href="https://google.com" alt="test">
-                    <i className="material-icons">cloud</i>
+                    <i className="material-icons right">add_circle</i>
                   </a>
                 </div>
               </div>
@@ -49,8 +52,11 @@ class ClubCard extends Component {
                   </p>
                 </div>
                 <div className="card-action">
+                <a className="link" href="https://google.com" alt="test">
+                    <i className="material-icons right">arrow_forward</i>
+                  </a>
                   <a className="link" href="https://google.com" alt="test">
-                    <i className="material-icons">cloud</i>
+                    <i className="material-icons right">add_circle</i>
                   </a>
                 </div>
               </div>
@@ -68,8 +74,11 @@ class ClubCard extends Component {
                   </p>
                 </div>
                 <div className="card-action">
+                <a className="link" href="https://google.com" alt="test">
+                    <i className="material-icons right">arrow_forward</i>
+                  </a>
                   <a className="link" href="https://google.com" alt="test">
-                    <i className="material-icons">cloud</i>
+                    <i className="material-icons right">add_circle</i>
                   </a>
                 </div>
               </div>
@@ -88,7 +97,10 @@ class ClubCard extends Component {
                 </div>
                 <div className="card-action">
                   <a className="link" href="https://google.com" alt="test">
-                    <i className="material-icons">cloud</i>
+                    <i className="material-icons right">arrow_forward</i>
+                  </a>
+                  <a className="link" href="https://google.com" alt="test">
+                    <i className="material-icons right">add_circle</i>
                   </a>
                 </div>
               </div>
@@ -106,8 +118,11 @@ class ClubCard extends Component {
                   </p>
                 </div>
                 <div className="card-action">
+                <a className="link" href="https://google.com" alt="test">
+                    <i className="material-icons right">arrow_forward</i>
+                  </a>
                   <a className="link" href="https://google.com" alt="test">
-                    <i className="material-icons">cloud</i>
+                    <i className="material-icons right">add_circle</i>
                   </a>
                 </div>
               </div>
