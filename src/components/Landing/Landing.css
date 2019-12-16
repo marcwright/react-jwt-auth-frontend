@@ -157,4 +157,10 @@ header {
   margin-right: 1rem;
 }
 
+.span-logo {
+  font-family: "Ritz", sans-serif;
+  letter-spacing: .1rem;
+  font-size: 1.9rem;
+}
+
 

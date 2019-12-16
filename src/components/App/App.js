@@ -9,6 +9,7 @@ import LogInForm from "../LogInForm/LogInForm";
 import LogOut from "../LogOut/LogOut";
 import Profile from "../Profile/Profile";
 import Explore from "../ExploreClubs/Explore";
+import CreateClub from "../CreateClub/CreateClub";
 import "./App.css";
 
 const databaseUrl =
@@ -180,6 +181,11 @@ class App extends Component {
             <Route
               path="/explore"
               component={Explore}
+              databaseUrl={databaseUrl}
+            />
+            <Route
+              path="/CreateClub"
+              component={CreateClub}
               databaseUrl={databaseUrl}
             />
           </Switch>

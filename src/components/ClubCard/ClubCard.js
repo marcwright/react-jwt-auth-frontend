@@ -10,6 +10,12 @@ class ClubCard extends Component {
       <div class="club-wrap">
         <h3>FILM CLUBS</h3>
 
+        <div className='btn-wrapper'>
+          <a href="/CreateClub" className="btn create-club-button">
+            Create Club
+          </a>
+        </div>
+
         <div className="container">
           <div className="row">
             <div className="col s12 l4">

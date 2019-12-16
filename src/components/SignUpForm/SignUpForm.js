@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import "./SignUpForm.css";
 
 class SignUpForm extends Component {
@@ -25,7 +24,7 @@ class SignUpForm extends Component {
               </p>
             </div>
 
-            
+
 
             {/* SIGN UP FORM */}
             <div className="col s12 l5 offset-l2 form-wrap">

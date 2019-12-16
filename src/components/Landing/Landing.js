@@ -11,7 +11,7 @@ class Landing extends Component {
           <h1 className="heading-primary">
             {/* <span className="heading-primary--main">Movie Lovers</span> */}
             <span className="heading-primary--sub">
-              Film Club is a place for movie lovers to form groups based on their
+              <span className='span-logo'>Film Club</span> is a place for movie lovers to form groups based on their
               common interests and discuss all topics related to film and
               televison.
             </span>
