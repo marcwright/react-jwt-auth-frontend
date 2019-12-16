@@ -7,9 +7,15 @@ class Thread extends Component {
   render() {
     return (
       <div class="row">
-        <div  id='thread-area' class="col s12 m8 l7"></div>
+        <div  id='thread-area' class="col s12 m12 l7">
+            {/* Thread  */}
+        </div>
 
-        <div id='response-area' class="col s12 m4 l5"></div>
+        <div id='response-area' class="col s12 m12 l5">
+
+        </div>
+          {/* Create Response text-area with submit btn */}
+          {/* response cards */}
       </div>
     );
   }

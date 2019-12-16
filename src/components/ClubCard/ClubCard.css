@@ -36,3 +36,7 @@ h3 {
 .card-content {
     background-color: #c0ab65;
 }
+
+.card-image {
+    height: 2%;
+}

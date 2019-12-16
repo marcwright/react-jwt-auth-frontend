@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter, Router } from "react-router-dom";
 import axios from "axios";
-import 'materialize-css/dist/css/materialize.min.css'
+import "materialize-css/dist/css/materialize.min.css";
 import NavBar from "../NavBar/NavBar";
 import Landing from "../Landing/Landing";
 import SignUpForm from "../SignUpForm/SignUpForm";
@@ -12,6 +12,7 @@ import Explore from "../ExploreClubs/Explore";
 import CreateClub from "../CreateClub/CreateClub";
 import Thread from "../Thread/Thread";
 import "./App.css";
+import ThreadGallery from "../ThreadGallery/ThreadGallery";
 
 const databaseUrl =
   process.env.NODE_ENV === "production"
@@ -179,20 +180,24 @@ class App extends Component {
               }}
             />
             <Route exact path="/" component={Landing} />
+
             <Route
               path="/explore"
-              component={Explore}
-              databaseUrl={databaseUrl}
+              component={() => <Explore databaseUrl={databaseUrl} />}
             />
             <Route
               path="/CreateClub"
-              component={CreateClub}
-              databaseUrl={databaseUrl}
+              component={() => <CreateClub databaseUrl={databaseUrl} />}
             />
             <Route
               path="/Thread"
               component={Thread}
-              databaseUrl={databaseUrl}
+              component={() => <Thread databaseUrl={databaseUrl} />}
+            />
+            <Route
+              path="/ThreadGallery"
+              component={ThreadGallery}
+              component={() => <ThreadGallery databaseUrl={databaseUrl} />}
             />
           </Switch>
         </div>
