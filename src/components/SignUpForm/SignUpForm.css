@@ -47,7 +47,7 @@ input {
 
 
 .form-wrap {
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .btn-wrap {
@@ -59,4 +59,16 @@ input {
 .btn {
    margin-left: 38%;
    background-color: #024C8A;
+}
+
+.input-field {
+    font-size: 3rem;
+}
+
+.signhead {
+    font-family: "Ritz", sans-serif;
+    color: #003764;
+}
+.login-message {
+    margin-left: 20%;
 }
