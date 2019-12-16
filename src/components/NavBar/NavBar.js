@@ -19,7 +19,7 @@ class NavBar extends Component {
       navBarItems.push(<NavItem key={4} href="/explore">MOVIES</NavItem>)
     }
     return (
-      <Navbar brand='FILM CLUB' className='nav' right>
+      <Navbar brand='FILM CLUB' className='nav logo' right>
         {navBarItems}
       </Navbar>
     )

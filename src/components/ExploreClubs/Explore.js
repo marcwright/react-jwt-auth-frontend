@@ -32,7 +32,6 @@ class Explore extends Component {
   render() {
     return (
       <div className="club-wrap">
-        <h3>Clubs</h3>
 
         <ClubCard />
       </div>

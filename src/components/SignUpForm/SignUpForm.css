@@ -44,3 +44,19 @@ input {
         rgba(0, 27, 77, 0.851)
     );
 } */
+
+
+.form-wrap {
+    margin-top: 5rem;
+}
+
+.btn-wrap {
+    
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.btn {
+   margin-left: 38%;
+   background-color: #024C8A;
+}
