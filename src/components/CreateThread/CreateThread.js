@@ -6,14 +6,24 @@ class SignUpForm extends Component {
     return (
       <div className='create-thread-wrap'>
         <form action="/action_page.php" id="usrform">
-          <input id='thread-btn' className="btn waves-effect waves-light" type="submit" />
-        </form>
+          
+          <div className="input-field">
+                  <i className="material-icons prefix">stars</i>
+                  <input type="text" id="text" />
+                  <label className="label" for="name">
+                    Thread Title
+                  </label>
+                </div>
+               
+        
 
         <div className='text-area-wrap'>
             <textarea className='text-area' name="comment" form="usrform">
-            Enter text here...
+            Start a discussion...
             </textarea>
         </div>
+        <input id='thread-btn' className="btn waves-effect waves-light" type="submit" />
+        </form>
       </div>
     );
   }
