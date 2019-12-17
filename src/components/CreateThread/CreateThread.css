@@ -31,3 +31,20 @@
 .btn {
     background-color: #024C8A
 }
+
+#thread-title {
+    width: 50%;
+   
+    font-size: 1.5rem;
+   
+}
+
+.thread-title {
+    width: 50%;
+}
+
+.input-field {
+    width: 50%;
+    font-size: 4rem;
+    margin: 0 auto;
+}

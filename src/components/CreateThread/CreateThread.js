@@ -9,9 +9,9 @@ class SignUpForm extends Component {
           
           <div className="input-field">
                   <i className="material-icons prefix">stars</i>
-                  <input type="text" id="text" />
-                  <label className="label" for="name">
-                    Thread Title
+                  <input className='thread-title' type="text" id="text" />
+                  <label id='thread-title' className="label" for="name">
+                    Title:
                   </label>
                 </div>
                
