@@ -13,6 +13,7 @@ class Profile extends Component {
     } else {
       return (
         <div>
+          <h4>Profile Page</h4>
         </div>
       )
     }
