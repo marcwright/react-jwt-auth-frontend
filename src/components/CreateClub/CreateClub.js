@@ -1,12 +1,45 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import axios from "axios";
 import "./CreateClub.css";
 
 class CreateClub extends Component {
-    state = {  }
-    render() { 
-        return ( 
-            <div className="signup-wrap">
+  state = {
+    title: "",
+    currentTopic: "",
+    currentMovieURL: ""
+  };
 
+  handleCreateClub = event => {
+    event.preventDefault();
+    const newClub = {
+      title: this.state.title,
+      description: this.state.description,
+      currentTopic: this.state.currentTopic,
+      currentMovieURL: this.state.currentMovieURL
+    };
+    const userID = window.localStorage.userID;
+    axios({
+      method: "post",
+      url: `${this.props.databaseUrl}/api/users/${userID}/clubs`,
+      data: newClub
+    }).then(response => {
+      console.log(response);
+    });
+
+    console.log("Club Created!");
+  };
+
+  handleInput = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+    console.log(this.state);
+  };
+
+  render() {
+    console.log(window.localStorage.userID);
+    return (
+      <div className="signup-wrap">
         {/* INTRODCTION TO SIGN UP */}
         <section className="section container scrollspy" id="contact">
           <div className="row">
@@ -35,31 +68,42 @@ class CreateClub extends Component {
               <form>
                 <div className="input-field">
                   <i className="material-icons prefix">group</i>
-                  <input type="text" id="title" />
-                  <label className="label" for="title">
-                    Create a club title:
+                  <input
+                    name="title"
+                    type="text"
+                    id="title"
+                    onChange={event => this.handleInput(event)}
+                  />
+                  <label className="label" htmlFor="title">
+                    Create a club title
                   </label>
                 </div>
                 <div className="input-field">
                   <i className="material-icons prefix">movie</i>
-                  <input type="text" id="current-movie" />
-                  <label className="label" for="current-movie">
+                  <input
+                    name="currentTopic"
+                    type="text"
+                    id="current-movie"
+                    onChange={event => this.handleInput(event)}
+                  />
+                  <label className="label" htmlFor="current-movie">
                     Choose a starting movie
                   </label>
                 </div>
                 <div className="input-field">
                   <i className="material-icons prefix">edit</i>
                   <textarea
+                    onChange={event => this.handleInput(event)}
+                    name="description"
                     id="description"
-                    className="materialize-textarea"
+                    className="materialize-textarea input-field"
                     cols="20"
                     rows="20"
                   ></textarea>
-                  <label className="label" for="description">
-                    Choose a topic for your club (this can change later). 
+                  <label className="label" htmlFor="description">
+                    Choose a topic for your club (this can be changed later).
                   </label>
                 </div>
-
 
                 {/* SUBMIT BUTTON */}
                 <div className="btn-wrap">
@@ -67,18 +111,18 @@ class CreateClub extends Component {
                     className="btn waves-effect waves-light"
                     type="submit"
                     name="action"
+                    onClick={event => this.handleCreateClub(event)}
                   >
                     Create
                   </button>
                 </div>
-                
               </form>
             </div>
           </div>
         </section>
       </div>
-         );
-    }
+    );
+  }
 }
- 
+
 export default CreateClub;

@@ -1,27 +1,39 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import './LogInForm.css'
+import "./LogInForm.css";
 
 class LogInForm extends Component {
-  render () {
+  render() {
     return (
-      <div className='login-wrap'>
+      <div className="login-wrap">
         <h2>Log In</h2>
 
         <form>
           <div>
-            <label htmlFor='email'>Email</label>
-            <input type='text' name='email' onChange={this.props.handleInput} />
+            <label htmlFor="username">Email</label>
+            <input
+              type="text"
+              name="username"
+              onChange={this.props.handleInput}
+            />
           </div>
           <div>
-            <label htmlFor='password'>Password</label>
-            <input type='text' name='password' onChange={this.props.handleInput} />
+            <label htmlFor="password">Password</label>
+            <input
+              type="text"
+              name="password"
+              onChange={this.props.handleInput}
+            />
           </div>
-          <input value='Submit' type='submit' onClick={this.props.handleLogIn} />
+          <input
+            value="Submit"
+            type="submit"
+            onClick={this.props.handleLogIn}
+          />
         </form>
       </div>
-    )
+    );
   }
 }
 
-export default LogInForm
+export default LogInForm;

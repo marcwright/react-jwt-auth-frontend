@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, withRouter, Router } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import axios from "axios";
 import "materialize-css/dist/css/materialize.min.css";
 import NavBar from "../NavBar/NavBar";
@@ -21,8 +21,11 @@ const databaseUrl =
 
 class App extends Component {
   state = {
-    email: "",
+    username: "",
     password: "",
+    firstName: "",
+    lastName: "",
+    email: "",
     isLoggedIn: false,
     user: null
   };
@@ -74,13 +77,17 @@ class App extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
+    console.log(this.state);
   };
 
   handleSignUp = e => {
     e.preventDefault();
     let newUser = {
-      email: this.state.email,
-      password: this.state.password
+      username: this.state.username,
+      password: this.state.password,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email
     };
     axios({
       method: "post",
@@ -101,7 +108,7 @@ class App extends Component {
   handleLogIn = e => {
     e.preventDefault();
     let loginUser = {
-      email: this.state.email,
+      username: this.state.username,
       password: this.state.password
     };
     axios({
@@ -112,10 +119,11 @@ class App extends Component {
       .then(response => {
         console.log(response);
         window.localStorage.setItem("token", response.data.token);
+        window.localStorage.setItem("userID", response.data.user._id);
         this.setState({
           isLoggedIn: true,
           user: response.data.user,
-          email: "",
+          username: "",
           password: ""
         });
         const location = {
@@ -187,16 +195,21 @@ class App extends Component {
             />
             <Route
               path="/CreateClub"
-              component={() => <CreateClub databaseUrl={databaseUrl} />}
+              component={() => (
+                <CreateClub
+                  databaseUrl={databaseUrl}
+                  isLoggedIn={this.state.isLoggedIn}
+                  handleInput={this.handleInput}
+                  user={this.state.user}
+                />
+              )}
             />
             <Route
               path="/Thread"
-              component={Thread}
               component={() => <Thread databaseUrl={databaseUrl} />}
             />
             <Route
               path="/ThreadGallery"
-              component={ThreadGallery}
               component={() => <ThreadGallery databaseUrl={databaseUrl} />}
             />
           </Switch>
