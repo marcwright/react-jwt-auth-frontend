@@ -11,7 +11,7 @@ import LogInForm from "../LogInForm/LogInForm";
 import LogOut from "../LogOut/LogOut";
 import Profile from "../Profile/Profile";
 import "./App.css";
-import Container from "../Questions/Container";
+//import Container from "../Questions/Container";
 
 <link
   rel="stylesheet"
@@ -216,7 +216,7 @@ class App extends Component {
               }}
             />
 
-            <Route
+            {/* <Route
               path="/questions"
               render={props => {
                 return (
@@ -226,7 +226,7 @@ class App extends Component {
                   />
                 );
               }}
-            />
+            /> */}
 
             <Route
               path="/questions"

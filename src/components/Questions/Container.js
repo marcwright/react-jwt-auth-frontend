@@ -1,71 +1,69 @@
 import React, { Component } from 'react'
 import { Button } from 'react-bootstrap/Button';
-import Container from 'react-materialize/lib/Container';
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Divider from 'react-materialize/lib/Divider';
 
 
+const Container = (props) = {
 
-class Container extends Component {
+      
+render() {
+	return(
 
-      render() { 
-return (
-   <div class="Container">
-       </div>
-
-	<div class = "Row">
+   <Container>
+	<Row>
 		<Col>Social Media</Col>
 		<Col>$200</Col>
 		<Col>$400</Col>
 		<Col>$600</Col>
 		<Col>$800</Col>
 		<Col>$1000</Col>
-	</div>
-	<div class = "Row">
+	</Row>
+	<Row>
 		<Col>Computer Science</Col>
 		<Col>$200</Col>
 		<Col>$400</Col>
 		<Col>$600</Col>
 		<Col>$800</Col>
 		<Col>$1000</Col>
-	</div>
-	<div class = "Row">
+	</Row>
+	<Row>
 		<Col>Music</Col>
 		<Col>$200</Col>
 		<Col>$400</Col>
 		<Col>$600</Col>
 		<Col>$800</Col>
 		<Col>$1000</Col>
-	</div>
-	<div class = "Row">
+	</Row>
+	<Row>
 		<Col>Games</Col>
 		<Col>$200</Col>
 		<Col>$400</Col>
 		<Col>$600</Col>
 		<Col>$800</Col>
 		<Col>$1000</Col>
-	</div>
-	<div class = "Row">
+	</Row>
+	<Row>
 		<Col>Sports</Col>
 		<Col>$200</Col>
 		<Col>$400</Col>
 		<Col>$600</Col>
 		<Col>$800</Col>
 		<Col>$1000</Col>
-	</div>
-	<div class = "Row">
+	</Row>
+	<Row>
 		<Col>Brands</Col>
 		<Col>$200</Col>
 		<Col>$400</Col>
 		<Col>$600</Col>
 		<Col>$800</Col>
 		<Col>$1000</Col>
-	</div>
+	</Row>
+	</Container>
 
-    <Button id="newGameButton">New Game</Button>
-)
-         
-
-   }
-
+)}
 }
 
 export default Container
