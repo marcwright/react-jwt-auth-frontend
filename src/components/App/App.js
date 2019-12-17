@@ -22,7 +22,7 @@ const databaseUrl =
 
 class App extends Component {
   state = {
-    email: "",
+    username: "",
     password: "",
     isLoggedIn: false,
     user: null
@@ -80,7 +80,7 @@ class App extends Component {
   handleSignUp = e => {
     e.preventDefault();
     let newUser = {
-      email: this.state.email,
+      username: this.state.username,
       password: this.state.password
     };
     axios({
@@ -102,7 +102,7 @@ class App extends Component {
   handleLogIn = e => {
     e.preventDefault();
     let loginUser = {
-      email: this.state.email,
+      username: this.state.username,
       password: this.state.password
     };
     axios({
@@ -116,7 +116,7 @@ class App extends Component {
         this.setState({
           isLoggedIn: true,
           user: response.data.user,
-          email: "",
+          username: "",
           password: ""
         });
         const location = {
@@ -204,11 +204,6 @@ class App extends Component {
               path="/CreateThread"
               component={CreateThread}
               component={() => <CreateThread databaseUrl={databaseUrl} />}
-            />
-            <Route
-              path="/Profile"
-              component={Profile}
-              component={() => <Profile databaseUrl={databaseUrl} />}
             />
           </Switch>
         </div>
