@@ -4,25 +4,26 @@ import "./CreateThread.css";
 class SignUpForm extends Component {
   render() {
     return (
-      <div className='create-thread-wrap'>
+      <div className="create-thread-wrap">
         <form action="/action_page.php" id="usrform">
-          
-          <div className="input-field">
-                  <i className="material-icons prefix">stars</i>
-                  <input className='thread-title' type="text" id="text" />
-                  <label id='thread-title' className="label" for="name">
-                    Title:
-                  </label>
-                </div>
-               
-        
+          <div className="thread input-field">
+            <i className="material-icons prefix">stars</i>
+            <input className="thread-title" type="text" id="text" />
+            <label id="thread-title" className="label" for="name">
+              Title:
+            </label>
+          </div>
 
-        <div className='text-area-wrap'>
-            <textarea className='text-area' name="comment" form="usrform">
-            Start a discussion...
+          <div className="text-area-wrap">
+            <textarea className="text-area" name="comment" form="usrform">
+              Start a discussion...
             </textarea>
-        </div>
-        <input id='thread-btn' className="btn waves-effect waves-light" type="submit" />
+          </div>
+          <input
+            id="thread-btn"
+            className="btn waves-effect waves-light"
+            type="submit"
+          />
         </form>
       </div>
     );

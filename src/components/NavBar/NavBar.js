@@ -17,6 +17,7 @@ class NavBar extends Component {
       navBarItems.push(<NavItem key={4} href='/login'>LOG IN</NavItem>)
       navBarItems.push(<NavItem key={4} href='/explore'>CLUBS</NavItem>)
       navBarItems.push(<NavItem key={4} href="/explore">MOVIES</NavItem>)
+      navBarItems.push(<NavItem key={4} href="/profile"><i className="material-icons prefix">account_circle</i></NavItem>)
     }
     return (
       <Navbar brand='FILM CLUB' className='nav logo' right>

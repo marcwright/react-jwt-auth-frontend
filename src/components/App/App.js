@@ -205,6 +205,11 @@ class App extends Component {
               component={CreateThread}
               component={() => <CreateThread databaseUrl={databaseUrl} />}
             />
+            <Route
+              path="/Profile"
+              component={Profile}
+              component={() => <Profile databaseUrl={databaseUrl} />}
+            />
           </Switch>
         </div>
       </div>

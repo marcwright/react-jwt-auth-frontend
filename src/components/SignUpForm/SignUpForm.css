@@ -1,74 +1,37 @@
-/* h2 {
-    margin: 0;
-    text-align: center;
-    color: white;
-    margin-bottom: 5rem;
-    padding-top: 5rem;
-    font-family: 'Fjalla One', sans-serif;
-}
-
-
-
-form {
-    margin: 0 30% 0 30%;
-    border: 2px solid red;
-}
-
-/* label {
-    color: white;
-    font-size: 2rem;
-}
-
-input {
-    color: white;
-    font-size: 2rem;
-} */
-
 .section {
-    padding-top: 6vw;
-    padding-bottom: 4vw;
-    font-size: 2rem;
+  padding-top: 6vw;
+  padding-bottom: 4vw;
+  font-size: 2rem;
 }
 
 .submit {
-    color: white;
-    background-color: tomato;
-    margin: 0 auto;
-} 
-
-/* .signup-wrap {
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba(82, 163, 255, 0.7),
-        rgba(0, 27, 77, 0.851)
-    );
-} */
-
+  color: white;
+  background-color: tomato;
+  margin: 0 auto;
+}
 
 .form-wrap {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .btn-wrap {
-    
-    width: 100%;
-    padding-top: 2rem;
+  width: 100%;
+  padding-top: 2rem;
 }
 
 .btn.sign {
-   margin-left: 38%;
-   background-color: #024C8A;
+  margin-left: 38%;
+  background-color: #024c8a;
 }
 
 .input-field {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 .signhead {
-    font-family: "Ritz", sans-serif;
-    color: #003764;
+  font-family: "Ritz", sans-serif;
+  color: #003764;
 }
 .login-message {
-    margin-left: 20%;
+  margin-left: 20%;
 }
