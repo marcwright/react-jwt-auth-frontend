@@ -21,7 +21,7 @@ class ThreadGallery extends Component {
     //   return <ThreadCard thread={thread} />;
     // })
     return (
-      <div className="row">
+      <div className="thread row">
         {this.createThreads()}
       </div>
     );

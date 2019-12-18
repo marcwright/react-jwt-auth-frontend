@@ -42,7 +42,7 @@ class Explore extends Component {
             Create Club
           </a>
         </div>
-        <div className='row'>
+        <div className='explore row'>
           {clubEls}
         </div>
       </div>

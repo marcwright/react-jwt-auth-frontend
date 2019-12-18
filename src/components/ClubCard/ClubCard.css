@@ -12,23 +12,22 @@
 } */
 
 .club-wrap {
-    background-color: rgb(240, 240, 240);
     height: 100vh;
 }
 
 h3 {
     margin: 0;
     text-align: center;
-    color: white;
     padding: 2rem 0;
     font-family: "Ritz", sans-serif;
     letter-spacing: .5rem;
 }
 
 .card {
-    color: #f8f8f8;
+    
     border: 2px solid #062742;
     box-shadow: 5px 5px 5px rgb(41, 41, 41);
+    
 }
 
 .card-content {
@@ -56,4 +55,14 @@ h3 {
 
 #club-card-title {
     color: #f8f8f8;
+}
+
+.zoom {
+    background-color:#ffff;
+    transition: transform .2s; 
+    margin: 1rem 1rem 2rem 0rem;
+  }
+  
+.zoom:hover {
+    transform: scale(1.1); 
 }

@@ -11,7 +11,7 @@ class ClubCard extends Component {
         
 
   
-            <div className="col m6 l2">
+            <div className="col m6 l2 zoom">
               <div className="card">
                 <div className="card-image waves-effect waves-block waves-light">
                   <img class="activator" src={this.props.club.currentMovieURL} />
@@ -29,7 +29,7 @@ class ClubCard extends Component {
                   <p className='club-description'>{this.props.club.description}</p>
                   <div className="card-action">
                 <a className="link" href="/CreateThread" alt="test">
-                    View Discussions
+                    Discussion
                   </a>
                   <br />
                   <a className="link" href="https://google.com" alt="test">

@@ -1,13 +1,6 @@
-/* .thread-form-wrap {
-    border: 1px solid red
-}
 
-.thread-gallery {
-    margin: 0;
-    padding: 0;
-}
+.thread.row {
+    width: 100%;
+    margin-top: 5rem;
 
-.thread-wrap {
-    margin: 0;
-    padding: 0;
-} */
+}
