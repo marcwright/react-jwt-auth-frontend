@@ -24,6 +24,9 @@ class App extends Component {
   state = {
     username: "",
     password: "",
+    firstName: "",
+    lastName: "",
+    email: "",
     isLoggedIn: false,
     user: null
   };
@@ -75,13 +78,17 @@ class App extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
+    console.log(this.state)
   };
 
   handleSignUp = e => {
     e.preventDefault();
     let newUser = {
       username: this.state.username,
-      password: this.state.password
+      password: this.state.password,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email
     };
     axios({
       method: "post",
