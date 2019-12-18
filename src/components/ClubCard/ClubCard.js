@@ -4,7 +4,7 @@ import "./ClubCard.css";
 import "materialize-css/dist/css/materialize.min.css";
 
 class ClubCard extends Component {
-  state = {};
+  state = { selectedClub: "" };
   render() {
     console.log(this.props.club);
     return (
@@ -18,7 +18,12 @@ class ClubCard extends Component {
             <p>{this.props.club.currentTopic}</p>
           </div>
           <div className="card-action">
-            <a className="link" href="https://google.com" alt="test">
+            <a
+              className="link"
+              href="/ThreadGallery"
+              alt="test"
+              onClick={() => this.props.passProps(this.props.club)}
+            >
               <i className="material-icons right">arrow_forward</i>
             </a>
             <a className="link" href="https://google.com" alt="test">

@@ -13,6 +13,7 @@ import CreateClub from "../CreateClub/CreateClub";
 import Thread from "../Thread/Thread";
 import "./App.css";
 import ThreadGallery from "../ThreadGallery/ThreadGallery";
+import MovieSearch from "../MovieSearch/MovieSearch";
 
 const databaseUrl =
   process.env.NODE_ENV === "production"
@@ -27,7 +28,8 @@ class App extends Component {
     lastName: "",
     email: "",
     isLoggedIn: false,
-    user: null
+    user: null,
+    selectedClub: ""
   };
 
   componentDidMount() {
@@ -61,6 +63,12 @@ class App extends Component {
     //   })
     // }
   }
+  // function to lift up state
+  passProps = selectedClub => {
+    this.setState({
+      selectedClub: selectedClub
+    });
+  };
 
   handleLogOut = e => {
     e.preventDefault();
@@ -136,6 +144,7 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.selectedClub);
     return (
       <div>
         <NavBar isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
@@ -164,6 +173,12 @@ class App extends Component {
                 );
               }}
             />
+            {/* <Route
+              path="/MovieSearch"
+              render={props => {
+                return <MovieSearch isLoggedIn={this.state.isLoggedIn} />;
+              }}
+            /> */}
             <Route
               path="/login"
               render={props => {
@@ -188,19 +203,24 @@ class App extends Component {
               }}
             />
             <Route exact path="/" component={Landing} />
-
+            // has data that needs to be passed
             <Route
               path="/explore"
-              component={() => <Explore databaseUrl={databaseUrl} />}
+              component={() => (
+                <Explore passProps={this.passProps} databaseUrl={databaseUrl} />
+              )}
             />
             <Route
               path="/CreateClub"
               component={() => (
                 <CreateClub
+                  searchTerm={this.state.searchTerm}
                   databaseUrl={databaseUrl}
                   isLoggedIn={this.state.isLoggedIn}
                   handleInput={this.handleInput}
                   user={this.state.user}
+                  handleMovieSearchInput={this.handleMovieSearchInput}
+                  searchMovie={this.searchMovie}
                 />
               )}
             />
@@ -208,9 +228,15 @@ class App extends Component {
               path="/Thread"
               component={() => <Thread databaseUrl={databaseUrl} />}
             />
+            // needs to be passed the selected Club
             <Route
               path="/ThreadGallery"
-              component={() => <ThreadGallery databaseUrl={databaseUrl} />}
+              component={() => (
+                <ThreadGallery
+                  databaseUrl={databaseUrl}
+                  selectedClub={this.state.selectedClub}
+                />
+              )}
             />
           </Switch>
         </div>

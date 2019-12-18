@@ -6,7 +6,8 @@ import "materialize-css/dist/css/materialize.min.css";
 
 class Explore extends Component {
   state = {
-    clubs: []
+    clubs: [],
+    selectedClub: ""
   };
 
   componentDidMount() {
@@ -16,10 +17,9 @@ class Explore extends Component {
   getClubs = () => {
     axios({
       method: "get",
-      url: `${this.props.databaseUrl}/api/clubs`,
+      url: `${this.props.databaseUrl}/api/clubs`
     })
       .then(response => {
-
         this.setState({
           clubs: response.data.clubs
         });
@@ -28,9 +28,8 @@ class Explore extends Component {
   };
 
   render() {
-    console.log(this.props.databaseUrl)
     const clubEls = this.state.clubs.map(club => {
-      return <ClubCard club={club} />;
+      return <ClubCard club={club} passProps={this.props.passProps} />;
     });
 
     return (
@@ -42,9 +41,7 @@ class Explore extends Component {
             Create Club
           </a>
         </div>
-        <div className='row'>
-          {clubEls}
-        </div>
+        <div className="row">{clubEls}</div>
       </div>
     );
   }

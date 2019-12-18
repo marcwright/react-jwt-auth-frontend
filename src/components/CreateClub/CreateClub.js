@@ -6,7 +6,37 @@ class CreateClub extends Component {
   state = {
     title: "",
     currentTopic: "",
-    currentMovieURL: ""
+    currentMovieURL: "",
+    searchTerm: "",
+    searchResults: []
+  };
+
+  apiKey = "dbea230ad54bcb5ce323189b53264a7f";
+  movieDatabase = "https://api.themoviedb.org/3/";
+
+  // handleMovieSearchInput = event => {
+  //   event.preventDefault();
+  //   this.setState({ searchTerm: event.target.value });
+  //   console.log(this.state);
+  // };
+
+  searchMovie = event => {
+    if (this.state.searchResults !== "") {
+      event.preventDefault();
+      this.setState({ searchTerm: event.target.value });
+
+      axios({
+        method: "get",
+        url: `https://api.themoviedb.org/3/search/multi?api_key=dbea230ad54bcb5ce323189b53264a7f&language=en-US&query=${this.state.searchTerm}&page=1&include_adult=true`
+      }).then(response => {
+        this.setState({ searchResults: response.data });
+        console.log(this.state.searchResults);
+        console.log(
+          `https://image.tmdb.org/t/p/w1280${this.state.searchResults.results[0].backdrop_path}`
+        );
+        // this.movieOptionTags();
+      });
+    }
   };
 
   handleCreateClub = event => {
@@ -33,11 +63,24 @@ class CreateClub extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-    console.log(this.state);
   };
 
+  movieOptionTags = () => {
+    const optionTags = this.state.searchResults.results.map(movie => {
+      <option key={movie.id.original_name} value={movie.id}>
+        {movie.original_name}
+      </option>;
+    });
+    return optionTags;
+  };
+
+  // optionTags = this.state.searchResults.results.map(movie => {
+  //   <option key={movie.id.original_name} value={movie.id}>
+  //     {movie.original_name}
+  //   </option>;
+  // });
+
   render() {
-    console.log(window.localStorage.userID);
     return (
       <div className="signup-wrap">
         {/* INTRODCTION TO SIGN UP */}
@@ -81,14 +124,19 @@ class CreateClub extends Component {
                 <div className="input-field">
                   <i className="material-icons prefix">movie</i>
                   <input
+                    value={this.state.searchTerm}
                     name="currentTopic"
                     type="text"
                     id="current-movie"
-                    onChange={event => this.handleInput(event)}
+                    onChange={event => this.searchMovie(event)}
                   />
+
                   <label className="label" htmlFor="current-movie">
                     Choose a starting movie
                   </label>
+                  {this.state.searchResults.results ? (
+                    <select name="doctorId">{this.movieOptionTags()}</select>
+                  ) : null}
                 </div>
                 <div className="input-field">
                   <i className="material-icons prefix">edit</i>
