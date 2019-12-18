@@ -28,7 +28,7 @@ class ClubCard extends Component {
                   </p>
                   <p className='club-description'>{this.props.club.description}</p>
                   <br />
-                  <div className="card-action left">
+                  <div className="club card-action right">
                 <a className="link" href="/CreateThread" alt="test">
                     Discussion
                   </a>

@@ -10,10 +10,12 @@ class LogInForm extends Component {
 
         <form className='form-login-wrap'>
           <div>
+          <i className="material-icons prefix">account_circle</i>
             <label htmlFor='username'>Username:</label>
             <input name="username" type='text' onChange={this.props.handleInput} />
           </div>
           <div>
+            <i class="material-icons prefix">lock</i>
             <label htmlFor='password'>Password:</label>
             <input name="password" type='text' name='password' onChange={this.props.handleInput} />
           </div>
