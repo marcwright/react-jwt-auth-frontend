@@ -7,8 +7,7 @@ class Profile extends Component {
     if (this.props.user != null) {
       return (
         <div>
-          <h4>{this.props.user.email}</h4>
-          <h4>Is Logged In</h4>
+          <h4>{this.props.user.firstName} Is Logged In</h4>
             <div>
                <h2>Log Out</h2>
 
@@ -21,7 +20,7 @@ class Profile extends Component {
     } else {
       return (
         <div>
-          <h4>You are not logged in</h4>
+          <h4>You are not logged in Dude!</h4>
         </div>
       )
     }

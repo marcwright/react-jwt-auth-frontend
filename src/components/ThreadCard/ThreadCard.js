@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
-import movieImg from './rambo.jpg'
+import './ThreadCard.css';
 
 class ThreadCard extends Component {
     state = {  }
     render() { 
         return ( 
 
-            <div class="row">
-                <div class="col s12 m6">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src={movieImg} />
-                            <span class="card-title">Card Title</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                    </div>
+            <div className="col sm12 m6 l4 xl2">
+              <div className="card">
+                <div className="card-image">
+                  <img src={'https://image.tmdb.org/t/p/w1280/tN7kYPjRhDolpui9sc9Eq9n5b2O.jpg'} alt="" />
                 </div>
-            </div>
+                <div className="card-content">
+                  <span className="card-title">Thread Title</span>
+                  <p>
+                      This should contain the a few lines of the thread prompt
+                  </p>
+                </div>
+              </div>
+              </div>
   
      
 

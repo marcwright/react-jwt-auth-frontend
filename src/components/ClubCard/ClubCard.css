@@ -29,14 +29,24 @@ h3 {
 }
 
 .card {
-    color: #0b385d;
-    border: 2px solid #003764;
+    color: #f8f8f8;
+    border: 2px solid #062742;
+    box-shadow: 5px 5px 5px rgb(41, 41, 41);
 }
 
 .card-content {
-    background-color: #c0ab65;
+    background-color: #1c5f95;
 }
 
-.card-image {
-    height: 2%;
+
+.card-title {
+    font-size: 100px;
+}
+
+.current-topic {
+    color: purple;
+}
+
+.club-description {
+    color: black
 }
