@@ -10,11 +10,11 @@ class LogInForm extends Component {
 
         <form className='form-login-wrap'>
           <div>
-            <label htmlFor='username'>Username</label>
+            <label htmlFor='username'>Username:</label>
             <input name="username" type='text' onChange={this.props.handleInput} />
           </div>
           <div>
-            <label htmlFor='password'>Password</label>
+            <label htmlFor='password'>Password:</label>
             <input name="password" type='text' name='password' onChange={this.props.handleInput} />
           </div>
           {/* <input value='Submit' type='submit' onClick={this.props.handleLogIn} /> */}
