@@ -27,10 +27,12 @@ class ClubCard extends Component {
                     {this.props.club.currentTopic}
                   </p>
                   <p className='club-description'>{this.props.club.description}</p>
-                  <div className="card-action">
+                  <br />
+                  <div className="card-action left">
                 <a className="link" href="/CreateThread" alt="test">
                     Discussion
                   </a>
+                  <br />
                   <br />
                   <a className="link" href="https://google.com" alt="test">
                     Join Club

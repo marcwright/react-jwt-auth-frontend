@@ -4,7 +4,9 @@ class ThreadTopic extends Component {
     state = {  }
     render() { 
         return ( 
-            <p>I am a Thread Topic</p>
+            <div className='thread-topic-wrap'>
+                <p>I am a Thread Topic</p>
+            </div>
          );
     }
 }
