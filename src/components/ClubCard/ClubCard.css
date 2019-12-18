@@ -12,11 +12,8 @@
 } */
 
 .club-wrap {
-    background-image: linear-gradient(
-      to right bottom,
-      rgba(82, 163, 255, 0.801),
-      rgba(0, 27, 77, 0.901)
-    );
+    background-color: rgb(240, 240, 240);
+    height: 100vh;
 }
 
 h3 {
@@ -43,10 +40,20 @@ h3 {
     font-size: 100px;
 }
 
-.current-topic {
-    color: purple;
+.watching {
+    color: black;
+    text-decoration: underline;
 }
 
 .club-description {
     color: black
+}
+
+.current-topic {
+    color: black;
+    color: rgb(148, 0, 0);
+}
+
+#club-card-title {
+    color: #f8f8f8;
 }
