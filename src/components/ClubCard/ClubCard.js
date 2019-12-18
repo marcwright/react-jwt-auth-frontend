@@ -18,7 +18,7 @@ class ClubCard extends Component {
                 </div>
                 <div className="card-content">
                   <span id='club-card-title' className="card-title activator">{this.props.club.title}<i class="material-icons right">more_vert</i></span>
-                  <p><a href="#">This is a link</a></p>
+                  <p><a href="/CreateThread"><i class="material-icons red-text text-darken-1">remove_red_eye</i></a></p>
                   </div>
                   <div class="card-reveal">
               <span class="card-title grey-text text-darken-4">{this.props.club.title}<i class="material-icons right">close</i></span>
@@ -28,7 +28,7 @@ class ClubCard extends Component {
                   </p>
                   <p className='club-description'>{this.props.club.description}</p>
                   <div className="card-action">
-                <a className="link" href="/ThreadGallery" alt="test">
+                <a className="link" href="/CreateThread" alt="test">
                     View Discussions
                   </a>
                   <br />

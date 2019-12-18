@@ -35,7 +35,7 @@ class Explore extends Component {
 
     return (
       <div className="club-wrap">
-        <h3>FILM CLUBS</h3>
+        <h2 className="indigo-text text-darken-4 signhead">FILM CLUBS</h2>
 
         <div className="btn-wrapper">
           <a href="/CreateClub" className="btn create-club-button">

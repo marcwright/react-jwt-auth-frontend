@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ThreadGallery from '../ThreadGallery/ThreadGallery.js';
 import "./CreateThread.css";
 
 class SignUpForm extends Component {
@@ -25,6 +26,7 @@ class SignUpForm extends Component {
             type="submit"
           />
         </form>
+        <ThreadGallery />
       </div>
     );
   }

@@ -4,7 +4,7 @@ import './Profile.css'
 class Profile extends Component {
   render() {
     console.log(this.props)
-    if (this.props.user != null) {
+    if (this.props.user !== null) {
       return (
         <div>
           <h4>{this.props.user.firstName} Is Logged In</h4>

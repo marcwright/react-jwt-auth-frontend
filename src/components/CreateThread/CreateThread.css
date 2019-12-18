@@ -10,8 +10,8 @@
 
 .text-area {
   border: 1px solid blue;
-  width: 80%;
-  height: 60vh;
+  width: 60%;
+  height: 30vh;
   font-size: 2rem;
   background-color: rgb(250, 250, 250);
 }
@@ -41,7 +41,7 @@
 }
 
 .thread.input-field {
-  width: 50%;
+  width: 30%;
   font-size: 4rem;
   margin: 0 auto;
 }
