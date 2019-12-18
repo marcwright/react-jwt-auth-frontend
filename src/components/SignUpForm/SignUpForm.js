@@ -106,7 +106,7 @@ class SignUpForm extends Component {
                 {/* SUBMIT BUTTON */}
                 <div className="btn-wrap">
                   <button
-                    className="btn waves-effect waves-light"
+                    className="btn sign waves-effect waves-light"
                     type="submit"
                     name="action"
                     onClick={this.props.handleSignUp}

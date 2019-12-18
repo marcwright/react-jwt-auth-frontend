@@ -8,6 +8,7 @@ class ClubCard extends Component {
   render() {
     console.log(this.props.club);
     return (
+
       <div className="col m6 l2">
         <div className="card">
           <div className="card-image">
@@ -32,6 +33,16 @@ class ClubCard extends Component {
           </div>
         </div>
       </div>
+
+      
+        
+
+  
+           
+          
+        
+      
+
     );
   }
 }

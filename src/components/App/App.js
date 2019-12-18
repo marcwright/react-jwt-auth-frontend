@@ -13,7 +13,7 @@ import CreateClub from "../CreateClub/CreateClub";
 import Thread from "../Thread/Thread";
 import "./App.css";
 import ThreadGallery from "../ThreadGallery/ThreadGallery";
-import MovieSearch from "../MovieSearch/MovieSearch";
+import CreateThread from "../CreateThread/CreateThread";
 
 const databaseUrl =
   process.env.NODE_ENV === "production"
@@ -237,6 +237,16 @@ class App extends Component {
                   selectedClub={this.state.selectedClub}
                 />
               )}
+            />
+            <Route
+              path="/CreateThread"
+              component={CreateThread}
+              component={() => <CreateThread databaseUrl={databaseUrl} />}
+            />
+            <Route
+              path="/Profile"
+              component={Profile}
+              component={() => <Profile databaseUrl={databaseUrl} />}
             />
           </Switch>
         </div>

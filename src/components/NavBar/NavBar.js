@@ -19,6 +19,7 @@ class NavBar extends Component {
         );
       }
     } else {
+
       navBarItems.push(
         <NavItem key={3} href="/signup">
           SIGN UP
@@ -39,6 +40,9 @@ class NavBar extends Component {
           MOVIES
         </NavItem>
       );
+
+     
+
     }
     return (
       <Navbar brand="FILM CLUB" className="nav logo" right>
