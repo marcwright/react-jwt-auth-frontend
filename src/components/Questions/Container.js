@@ -3,16 +3,25 @@ import { Button } from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import Divider from 'react-materialize/lib/Divider';
 
 
-const Container = (props) = {
+
+ 
+class Container extends Component {
+		state = {
+			Row: "",
+			col: ""
+		}
+			
+
 
       
-render() {
+ render() {
 	return(
-
-   <Container>
+   
+//    
+<div>
+<Container> 
 	<Row>
 		<Col>Social Media</Col>
 		<Col>$200</Col>
@@ -61,9 +70,11 @@ render() {
 		<Col>$800</Col>
 		<Col>$1000</Col>
 	</Row>
-	</Container>
-
-)}
+	 </Container> 
+	</div>
+ )}
 }
+
+
 
 export default Container

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import axios from "axios";
-import Questions from "../Questions/Questions";
-import { Button } from 'react-bootstrap';
+import Question from "../Questions/Question";
+//import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from "../NavBar/NavBar";
@@ -13,38 +13,90 @@ import Profile from "../Profile/Profile";
 import "./App.css";
 //import Container from "../Questions/Container";
 
-<link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossorigin="anonymous"
-/>
 const serverUrl = "http://opentdb.com/api.php?amount=10";
 const databaseUrl =
   process.env.NODE_ENV === "production"
     ? process.env.BACKEND_APP_URL
     : "http://localhost:3000";
 
-class App extends Component {
-  state = {
-    email: "",
-    password: "",
-    isLoggedIn: false,
-    user: null,
-    Question: "",
-    Answers: ""
-  };
 
-  componentDidMount() {
-    if (localStorage.token) {
-      this.setState({
-        isLoggedIn: true
-      });
-    } else {
-      this.setState({
-        isLoggedIn: false
-      });
-    }
+    class App extends Component {
+      state = {
+        email: "",
+        password: "",
+        isLoggedIn: false,
+        user: null,
+        Question: "",
+        Answers: ""
+      };
+
+
+  
+
+//   <Container>
+// 	<Row>
+//   <Col>Social Media</Col>
+//   <Col>$200</Col>
+//   <Col>$400</Col>
+//   <Col>$600</Col>
+//   <Col>$800</Col>
+//   <Col>$1000</Col>
+// </Row>
+// <Row>
+//   <Col>Computer Science</Col>
+//   <Col>$200</Col>
+//   <Col>$400</Col>
+//   <Col>$600</Col>
+//   <Col>$800</Col>
+//   <Col>$1000</Col>
+// </Row>
+// <Row>
+//   <Col>Music</Col>
+//   <Col>$200</Col>
+//   <Col>$400</Col>
+//   <Col>$600</Col>
+//   <Col>$800</Col>
+//   <Col>$1000</Col>
+// </Row>
+// <Row>
+//   <Col>Games</Col>
+//   <Col>$200</Col>
+//   <Col>$400</Col>
+//   <Col>$600</Col>
+//   <Col>$800</Col>
+//   <Col>$1000</Col>
+// </Row>
+// <Row>
+//   <Col>Sports</Col>
+//   <Col>$200</Col>
+//   <Col>$400</Col>
+//   <Col>$600</Col>
+//   <Col>$800</Col>
+//   <Col>$1000</Col>
+// </Row>
+// <Row>
+//   <Col>Brands</Col>
+//   <Col>$200</Col>
+//   <Col>$400</Col>
+//   <Col>$600</Col>
+//   <Col>$800</Col>
+//   <Col>$1000</Col>
+// </Row>
+//  </Container>
+
+
+
+
+  // componentDidMount() {
+  //   if (localStorage.token) {
+  //     this.setState({
+  //       isLoggedIn: true
+  //     });
+  //   } else {
+  //     this.setState({
+  //       isLoggedIn: false
+  //     });
+  //   }
     // if (localStorage.token) {
     //   axios(
     //     {
@@ -65,76 +117,32 @@ class App extends Component {
     //     isLoggedIn: false
     //   })
     // }
-  }
+  // }
 
-  handleLogOut = e => {
-    e.preventDefault();
-    window.localStorage.clear();
-    this.setState({
-      email: "",
-      password: "",
-      isLoggedIn: false
-    });
-    this.props.history.push("/login");
-  };
+  // handleLogOut = e => {
+  //   e.preventDefault();
+  //   window.localStorage.clear();
+  //   this.setState({
+  //     email: "",
+  //     password: "",
+  //     isLoggedIn: false
+  //   });
+  //   this.props.history.push("/login");
+  // };
 
-  handleInput = e => {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  };
+  // handleInput = e => {
+  //   this.setState({
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
 
-  handleSignUp = e => {
-    e.preventDefault();
-    let newUser = {
-      email: this.state.email,
-      password: this.state.password,
-      question: this.state.question
-    };
-    axios({
-      method: "post",
-      url: `${databaseUrl}/api/users/signup`,
-      data: newUser
-    })
-      .then(response => {
-        console.log(response);
-        const location = {
-          pathname: "/login",
-          state: { fromDashboard: true }
-        };
-        this.props.history.replace(location);
-      })
-      .catch(err => console.log(err));
-  };
-
-  handleLogIn = e => {
-    e.preventDefault();
-    let loginUser = {
-      email: this.state.email,
-      password: this.state.password
-    };
-    axios({
-      method: "post",
-      url: `${databaseUrl}/api/users/login`,
-      data: loginUser
-    })
-      .then(response => {
-        console.log(response);
-        window.localStorage.setItem("token", response.data.token);
-        this.setState({
-          isLoggedIn: true,
-          user: response.data.user,
-          email: "",
-          password: ""
-        });
-        const location = {
-          pathname: "/profile",
-          state: { fromDashboard: true }
-        };
-        this.props.history.replace(location);
-      })
-      .catch(err => console.log(err));
-  };
+  // handleSignUp = e => {
+  //   e.preventDefault();
+  //   let newUser = {
+  //     email: this.state.email,
+  //     password: this.state.password,
+  //     // question: this.state.question
+  //   }; };
 
   // handleChange = e => {
   //   let inputField =
@@ -217,7 +225,7 @@ class App extends Component {
             />
 
             {/* <Route
-              path="/questions"
+              path="/questions/Container"
               render={props => {
                 return (
                   <Container
@@ -227,12 +235,11 @@ class App extends Component {
                 );
               }}
             /> */}
-
             <Route
               path="/questions"
               render={props => {
                 return (
-                  <Questions
+                  <Question
                     isLoggedIn={this.state.isloggedin}
                     handleInput={this.state.handleInput}
                   />

@@ -28,7 +28,7 @@ class NavBar extends Component {
       );
     }
     return (
-      <Navbar brand="Lets Play Jeopardy" className="text-center">
+      <Navbar brand="Personal Jeopardy" className="text-center">
         {navBarItems}
       </Navbar>
     );
@@ -38,7 +38,6 @@ class NavBar extends Component {
     if (this.props.isLoggedIn) {
       navBarItems.push(
         <NavItem key={6} href="/letsPlay">
-          Choose
         </NavItem>
       );
     }
