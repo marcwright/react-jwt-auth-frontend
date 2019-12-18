@@ -14,9 +14,9 @@ class NavBar extends Component {
 
     } else {
       navBarItems.push(<NavItem key={3} href='/signup'>SIGN UP</NavItem>)
-      navBarItems.push(<NavItem key={4} href='/login'>LOG IN</NavItem>)
-      navBarItems.push(<NavItem key={4} href='/explore'>CLUBS</NavItem>)
-      navBarItems.push(<NavItem key={4} href="/explore">MOVIES</NavItem>)
+      navBarItems.push(<NavItem key={6} href='/login'>LOG IN</NavItem>)
+      navBarItems.push(<NavItem key={7} href='/explore'>CLUBS</NavItem>)
+      navBarItems.push(<NavItem key={8} href="/explore">MOVIES</NavItem>)
       navBarItems.push()
     }
     return (

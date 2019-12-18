@@ -11,6 +11,7 @@ class Explore extends Component {
   };
 
   componentDidMount() {
+    window.localStorage.setItem("clubID", "")
     this.getClubs();
   }
 
@@ -31,7 +32,7 @@ class Explore extends Component {
   render() {
     console.log(this.props)
     const clubEls = this.state.clubs.map(club => {
-      return <ClubCard club={club} />;
+      return <ClubCard key={club._id} club={club} />;
     });
 
     return (

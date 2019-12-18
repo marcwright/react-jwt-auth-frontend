@@ -2,7 +2,12 @@ import React, { Component } from "react";
 import ThreadGallery from '../ThreadGallery/ThreadGallery.js';
 import "./CreateThread.css";
 
-class SignUpForm extends Component {
+class CreateThread extends Component {
+
+  // componentDidMount() {
+  //   // window.localStorage.setItem("threadID", "")
+  // }
+
   render() {
    
     console.log(window.localStorage)
@@ -34,7 +39,7 @@ class SignUpForm extends Component {
   }
 }
 
-export default SignUpForm;
+export default CreateThread;
 
 {
   /* <form className='form'>

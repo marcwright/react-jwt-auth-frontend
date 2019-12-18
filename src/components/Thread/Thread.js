@@ -7,7 +7,7 @@ import ThreadResponseCard from "../ThreadResponseCard/ThreadResponseCard.js";
 
 class Thread extends Component {
 
-  state ={ 
+  state = { 
     responsesArray: null
   }
 
