@@ -3,19 +3,25 @@ import './ThreadCard.css';
 
 class ThreadCard extends Component {
     state = {  }
+
+  componentDidMount = () => {
+    window.localStorage.setItem("threadID", this.props.movieData._id)
+  }
+
+
     render() { 
         return ( 
 
-          
+
             <div className="col sm12 m6 l4 xl2 zoom">
               <div className="card">
                 <div className="card-image">
-                  <a href='/Thread'><img src={'https://image.tmdb.org/t/p/w1280/tN7kYPjRhDolpui9sc9Eq9n5b2O.jpg'} alt="" /></a>
+                  <a href='/Thread'><img src={this.props.movieData.thumbnailURL} alt="" /></a>
                 </div>
                 <div className="thread card-content">
-                  <span className="card-title">Thread Title</span>
+                  <span className="card-title">{this.props.movieData.title}</span>
                   <p>
-                      This should contain the a few lines of the thread prompt
+                      {this.props.movieData.prompt}
                   </p>
                 </div>
               </div>

@@ -196,11 +196,11 @@ class App extends Component {
               component={Thread}
               component={() => <Thread databaseUrl={databaseUrl} />}
             />
-            <Route
+            {/* <Route
               path="/ThreadGallery"
               component={ThreadGallery}
               component={() => <ThreadGallery databaseUrl={databaseUrl} />}
-            />
+            /> */}
             <Route
               path="/CreateThread"
               component={CreateThread}

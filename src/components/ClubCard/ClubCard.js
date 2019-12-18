@@ -1,16 +1,24 @@
 import React, { Component } from "react";
+
+import {BrowserRouter as Router, Route, Switch, Redirect, withRouter} from "react-router-dom"
+import CreateThread from "../CreateThread/CreateThread"
 import "./ClubCard.css";
 import "materialize-css/dist/css/materialize.min.css";
 
 class ClubCard extends Component {
-  state = {};
-  render() {
-    console.log(this.props.club)
-    return (
-      
-        
+  state = { };
+
 
   
+  storeClubID = () => {
+    window.localStorage.setItem("clubID", this.props.club._id)
+  }
+
+
+  render() {
+    console.log(this.props)
+    return (
+      
             <div className="col m6 l2 zoom">
               <div className="card">
                 <div className="card-image waves-effect waves-block waves-light">
@@ -29,7 +37,8 @@ class ClubCard extends Component {
                   <p className='club-description'>{this.props.club.description}</p>
                   <br />
                   <div className="club card-action right">
-                <a className="link" href="/CreateThread" alt="test">
+
+                <a className="link" href="/CreateThread" onClick={this.storeClubID} alt="test">
                     Discussion
                   </a>
                   <br />
@@ -57,4 +66,4 @@ class ClubCard extends Component {
   }
 }
 
-export default ClubCard;
+export default withRouter(ClubCard);

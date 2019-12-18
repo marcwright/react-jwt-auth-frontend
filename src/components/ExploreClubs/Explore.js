@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter} from "react-router-dom";
 import axios from "axios";
 import ClubCard from "../ClubCard/ClubCard";
 import "./Explore.css";
@@ -28,7 +29,7 @@ class Explore extends Component {
   };
 
   render() {
-    console.log(this.props.databaseUrl)
+    console.log(this.props)
     const clubEls = this.state.clubs.map(club => {
       return <ClubCard club={club} />;
     });
@@ -50,4 +51,4 @@ class Explore extends Component {
   }
 }
 
-export default Explore;
+export default withRouter(Explore);

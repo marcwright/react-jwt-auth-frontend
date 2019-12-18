@@ -4,6 +4,8 @@ import "./CreateThread.css";
 
 class SignUpForm extends Component {
   render() {
+   
+    console.log(window.localStorage)
     return (
       <div className="create-thread-wrap">
         <form action="/action_page.php" id="usrform">
@@ -26,7 +28,7 @@ class SignUpForm extends Component {
             type="submit"
           />
         </form>
-        <ThreadGallery />
+        <ThreadGallery databaseUrl={this.props.databaseUrl}/>
       </div>
     );
   }

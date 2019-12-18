@@ -15,7 +15,7 @@ class ThreadResponseCard extends Component {
         </div>
               <div class="card-content white-text response">
                 <p>
-                  This is my witty comment regarding this post.
+                  {this.props.responseData.text}
                 </p>
               </div>
             </div>
