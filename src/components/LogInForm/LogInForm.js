@@ -6,9 +6,9 @@ class LogInForm extends Component {
   render () {
     return (
       <div className='login-wrap'>
-        <h2>Log In</h2>
+        <h3 className='login-header'>Log In</h3>
 
-        <form>
+        <form className='form-login-wrap'>
           <div>
             <label htmlFor='username'>Username</label>
             <input name="username" type='text' onChange={this.props.handleInput} />
@@ -17,7 +17,17 @@ class LogInForm extends Component {
             <label htmlFor='password'>Password</label>
             <input name="password" type='text' name='password' onChange={this.props.handleInput} />
           </div>
-          <input value='Submit' type='submit' onClick={this.props.handleLogIn} />
+          {/* <input value='Submit' type='submit' onClick={this.props.handleLogIn} /> */}
+          <div className="btn-wrap">
+                  <button
+                    className="btn sign waves-effect waves-light"
+                    type="submit"
+                    name="action"
+                    onClick={this.props.handleLogIn}
+                  >
+                    Submit
+                  </button>
+                </div>
         </form>
       </div>
     )
