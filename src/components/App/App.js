@@ -113,6 +113,7 @@ class App extends Component {
       .then(response => {
         console.log(response);
         window.localStorage.setItem("token", response.data.token);
+        window.localStorage.setItem("userID", response.data.user._id)
         this.setState({
           isLoggedIn: true,
           user: response.data.user,

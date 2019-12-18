@@ -4,6 +4,7 @@ import './LogInForm.css'
 
 class LogInForm extends Component {
   render () {
+    console.log(this.props)
     return (
       <div className='login-wrap'>
         <h3 className='login-header'>Log In</h3>
@@ -26,6 +27,7 @@ class LogInForm extends Component {
                     type="submit"
                     name="action"
                     onClick={this.props.handleLogIn}
+    
                   >
                     Submit
                   </button>
