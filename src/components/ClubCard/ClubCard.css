@@ -34,9 +34,10 @@ h3 {
 .card-content {
     background-image: radial-gradient(
     to right bottom,
-      rgba(254, 255, 177, 0.8),
+      rgba(249, 250, 225, 0.8),
       rgba(224, 224, 224, 0.901)
     );
+    background-color: white;
     height: 12rem;
     color: red;
 }
@@ -72,4 +73,8 @@ span#club-card-title {
 .zoom:hover {
     transform: scale(1.1); 
 }
+
+/* p.club-eye {
+    margin-top: 10rem;
+} */
 
