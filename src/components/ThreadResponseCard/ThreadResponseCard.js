@@ -10,7 +10,7 @@ class ThreadResponseCard extends Component {
          
             <div class="card blue-grey darken-1">
             <div class="card-action">
-          <a href="#"><i class="material-icons left">account_circle</i></a>
+            <a href="#"><i class="material-icons left">account_circle</i><span>{this.props.username}</span></a>
           <a href="#"><i class="material-icons right">favorite</i></a>
         </div>
               <div class="card-content white-text response">

@@ -14,6 +14,7 @@ class Thread extends Component {
   componentDidMount = () => {
     this.getResponses();
     this.getThread();
+    this.getLoggedInUser();
   };
 
   getResponses = () => {
@@ -28,6 +29,49 @@ class Thread extends Component {
         });
       })
       .catch(err => console.log(err));
+  };
+
+  handleCreateResponse = event => {
+    event.preventDefault();
+    const newResponse = {
+      text: this.state.text,
+      username: this.state.user.username,
+      likes: 0,
+      timestamp: new Date() 
+    };
+    const threadID = window.localStorage.threadID;
+    axios({
+      method: "post",
+      url: `${this.props.databaseUrl}/api/threads/${threadID}/responses`,
+      data: newResponse
+    }).then(response => {
+      console.log(response);
+    });
+  };
+
+  getLoggedInUser = () => {
+    console.log(
+      `${this.props.databaseUrl}/api/users/${window.localStorage.userID}`
+    );
+    console.log(`Bearer ${window.localStorage.token}`);
+    axios({
+      method: "get",
+      url: `${this.props.databaseUrl}/api/users/${window.localStorage.userID}`
+      // headers: { Authorization: `Bearer ${window.localStorage.token}`}
+    }).then(response => {
+      this.setState({
+        user: response.data
+      });
+      console.log(this.state.user)
+      return(this.state.user)
+    });
+  };
+
+  handleInput = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+    console.log(this.state)
   };
 
   getThread = () => {
@@ -60,9 +104,9 @@ class Thread extends Component {
         </div>
 
         <div id="response-area" class="col s12 m12 l5">
-          <form>
+          <form onChange={(event) => this.handleInput(event)}>
             <div className="text-area-wrap">
-              <textarea className="text-area" name="comment" form="usrform">
+              <textarea className="text-area" name="text" form="usrform">
                 Start a discussion...
               </textarea>
             </div>
@@ -70,11 +114,12 @@ class Thread extends Component {
               id="thread-btn"
               className="btn waves-effect waves-light"
               type="submit"
+              onClick={(event) => {this.handleCreateResponse(event)}}
             />
           </form>
-          {this.state.responsesArray
+          {this.state.responsesArray && this.state.user
             ? this.state.responsesArray.map(response => {
-                return <ThreadResponseCard responseData={response} />;
+                return <ThreadResponseCard username={this.state.user.username} responseData={response} />;
               })
             : null}
         </div>
