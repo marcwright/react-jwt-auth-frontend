@@ -1,6 +1,18 @@
-.body {
+body {
   margin: 3%;
   text-align: center;
+  
+
 }
 
 
+body {
+  background-Image: Url(https://backgroundcheckall.com/wp-content/uploads/2017/12/jeopardy-background-2.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 125%;
+  }
+input {
+  
+
+}

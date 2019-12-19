@@ -5,13 +5,13 @@ import Question from "../Questions/Question";
 //import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import NavBar from "../NavBar/NavBar";
+//import NavBar from "../NavBar/NavBar";
 import SignUpForm from "../SignUpForm/SignUpForm";
 import LogInForm from "../LogInForm/LogInForm";
 import LogOut from "../LogOut/LogOut";
 import Profile from "../Profile/Profile";
 import "./App.css";
-//import Container from "../Questions/Container";
+import Board from "../Questions/Board";
 
 const serverUrl = "http://opentdb.com/api.php?amount=10";
 const databaseUrl =
@@ -28,6 +28,7 @@ const databaseUrl =
         user: null,
         Question: "",
         Answers: ""
+       
       };
 
 
@@ -149,16 +150,16 @@ const databaseUrl =
   //     // console.log(e.target.)
   //     this.setState({ [e.target.name]: e.target.value })
 
-  getQuestions = () => {
-    axios({
-      url: serverUrl,
-      method: "get"
-    }).then(response => {
-      this.setState({
-        Questions: response.data.Questions
-      });
-    });
-  };
+  // getQuestions = () => {
+  //   axios({
+  //     url: serverUrl,
+  //     method: "get"
+  //   }).then(response => {
+  //     this.setState({
+  //       Questions: response.data.Questions
+  //     });
+  //   });
+  // };
 
   getAnswers = () => {
     axios({
@@ -174,7 +175,7 @@ const databaseUrl =
   render() {
     return (
       <div>
-        <NavBar isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
+         {/* <NavBar isLoggedIn={this.state.isLoggedIn} user={this.state.user} /> */}
         <div className="body">
           <Switch>
             <Route
@@ -224,17 +225,17 @@ const databaseUrl =
               }}
             />
 
-            {/* <Route
-              path="/questions/Container"
+            <Route
+              path="/Questions/Board"
               render={props => {
                 return (
-                  <Container
+                  <Board
                     isLoggedIn={this.state.isloggedin}
                     handleInput={this.state.handleInput}
                   />
                 );
               }}
-            /> */}
+            />
             <Route
               path="/questions"
               render={props => {

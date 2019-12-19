@@ -34,13 +34,13 @@ class NavBar extends Component {
     );
   }
 
-  newMethod(navBarItems) {
-    if (this.props.isLoggedIn) {
-      navBarItems.push(
-        <NavItem key={6} href="/letsPlay">
-        </NavItem>
-      );
-    }
-  }
+  // newMethod(navBarItems) {
+  //   if (this.props.isLoggedIn) {
+  //     navBarItems.push(
+  //       <NavItem key={6} href="/letsPlay">
+  //       </NavItem>
+  //     );
+  //   }
+  // }
 }
 export default NavBar;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import LoginForm from './LoginForm.js'
 
 
 
@@ -44,7 +44,7 @@ class LandingPage extends Component {
         let newUser = {
           email: this.state.email,
           password: this.state.password,
-          // question: this.state.question
+           question: this.state.question
         }; };
 
 }
