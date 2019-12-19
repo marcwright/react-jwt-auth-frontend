@@ -46,11 +46,18 @@ class CreateThread extends Component {
       <div className="create-thread-wrap">
         <form action="/action_page.php" id="usrform">
           <div className="thread input-field">
-            <i className="material-icons prefix">stars</i>
+            <i id='thread-icon' className="material-icons prefix left">stars</i>
             <input className="thread-title" type="text" id="text" name="title" onChange={event => this.handleInput(event)}/>
             <label id="thread-title" className="label" for="name">
-              Title:
+              Create a Title:
             </label>
+          </div>
+
+
+          <div>
+            <i id='thread-icon' class="material-icons prefix">stars</i>
+            <label htmlFor='password'>Title:</label>
+            <input name="password" type='text' name='password' onChange={event => this.handleInput(event)} />
           </div>
 
           <div className="text-area-wrap">

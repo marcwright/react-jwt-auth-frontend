@@ -1,5 +1,5 @@
 .section {
-  padding-top: 6vw;
+  padding-top: 4vw;
   padding-bottom: 4vw;
   font-size: 2rem;
 }
@@ -11,7 +11,7 @@
 }
 
 .form-wrap {
-  margin-top: 2rem;
+  margin-top: 0rem;
 }
 
 .btn-wrap {
@@ -28,10 +28,33 @@
   font-size: 3rem;
 }
 
-.signhead {
+h2.indigo-text.text-darken-4.signhead {
   font-family: "Ritz", sans-serif;
   color: #003764;
+  padding: 0;
+  margin-top: 3rem;
 }
 .login-message {
   margin-left: 20%;
+}
+
+label.signup-label {
+  font-size: 1.5rem;
+}
+
+div.input-field {
+  padding-bottom: 2rem;
+}
+
+.sign.material-icons.prefix {
+  font-size: 2.5rem;
+}
+
+input#text {
+  padding-bottom: 2rem;
+}
+
+
+form.signup-form {
+  height: 100vh;
 }

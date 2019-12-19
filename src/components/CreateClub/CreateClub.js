@@ -72,32 +72,20 @@ class CreateClub extends Component {
   // });
   render() {
     return (
-      <div className="signup-wrap">
+      <div className="create-club-wrap">
         {/* INTRODCTION TO SIGN UP */}
         <section className="section container scrollspy" id="contact">
-          <div className="row">
-            <div className="col s12 l5">
-              <h2 className="indigo-text text-darken-4 signhead">
-                Create your own film club...
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.
-              </p>
-              <p>
-                Mauris dolor augue, vulputate in pharetra ac, facilisis nec
-                libero. Fusce condimentum gravida urna, vitae scelerisque erat
-                ornare nec.
-              </p>
-            </div>
             {/* title: { type: String, required: true },
   description: { type: String },
   currentTopic: { type: String },
   currentMovieURL: { type: String }, */}
             {/* SIGN UP FORM */}
             <div className="col s12 l5 offset-l2 form-wrap">
-              <form>
-                <div className="input-field">
+              <form id='create-club-form'>
+              <h2 className="indigo-text text-darken-4 signhead">
+                Create your own film club...
+              </h2>
+                <div className="club input-field">
                   <i className="material-icons prefix">group</i>
                   <input
                     name="title"
@@ -106,7 +94,7 @@ class CreateClub extends Component {
                     onChange={event => this.handleInput(event)}
                   />
                   <label className="label" htmlFor="title">
-                    Create a club title
+                    CLUB TITLE:
                   </label>
                 </div>
                 <div className="input-field">
@@ -119,7 +107,7 @@ class CreateClub extends Component {
                     // onChange={event => this.searchMovie(event)}
                   />
                   <label className="label" htmlFor="current-movie">
-                    Choose a starting movie
+                    STARTING MOVIE:
                   </label>
                   {this.state.searchResults.results ? (
                     <select name="doctorId">{this.movieOptionTags()}</select>
@@ -136,11 +124,11 @@ class CreateClub extends Component {
                     rows="20"
                   ></textarea>
                   <label className="label" htmlFor="description">
-                    Choose a topic for your club (this can be changed later).
+                    TOPIC:
                   </label>
                 </div>
                 {/* SUBMIT BUTTON */}
-                <div className="btn-wrap">
+                <div className="create-club-btn">
                   <button
                     className="btn waves-effect waves-light"
                     type="submit"
@@ -152,7 +140,7 @@ class CreateClub extends Component {
                 </div>
               </form>
             </div>
-          </div>
+          
         </section>
       </div>
     );

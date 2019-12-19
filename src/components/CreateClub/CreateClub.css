@@ -1,0 +1,20 @@
+label.label {
+    font-size: 1.5rem;
+}
+
+input#current-movie {
+    margin: 2rem;
+}
+
+textarea#description {
+    margin: 2rem;
+}
+
+form#create-club-form {
+    width: 75%;
+    /* margin-top: 2rem; */
+}
+
+div.create-club-btn {
+    margin-left: 40%;
+}

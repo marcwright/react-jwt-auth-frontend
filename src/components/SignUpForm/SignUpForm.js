@@ -23,21 +23,21 @@ class SignUpForm extends Component {
             </div>
             {/* SIGN UP htmlForM */}
             <div className="col s12 l5 offset-l2 htmlForm-wrap">
-              <form>
+              <form className='signup-form'>
                 <div className="input-field">
-                  <i className="material-icons prefix">account_circle</i>
+                  <i className="sign material-icons prefix">account_circle</i>
                   <input
                     name="username"
                     type="text"
                     id="text"
                     onChange={this.props.handleInput}
                   />
-                  <label className="label" htmlFor="name">
+                  <label className="signup-label" htmlFor="name">
                     Username:
                   </label>
                 </div>
                 <div className="input-field">
-                  <i className="material-icons prefix">contacts</i>
+                  <i className="sign material-icons prefix">contacts</i>
                   <input
                     name="firstName"
                     htmlFor="firstName"
@@ -45,12 +45,12 @@ class SignUpForm extends Component {
                     id="text"
                     onChange={this.props.handleInput}
                   />
-                  <label className="label" htmlFor="firstName">
+                  <label className="sign signup-label" htmlFor="firstName">
                     First Name:
                   </label>
                 </div>
                 <div className="input-field">
-                  <i className="material-icons prefix">contacts</i>
+                  <i className="sign material-icons prefix">contacts</i>
                   <input
                     name="lastName"
                     htmlFor="lastName"
@@ -58,12 +58,12 @@ class SignUpForm extends Component {
                     id="text"
                     onChange={this.props.handleInput}
                   />
-                  <label className="label" htmlFor="name">
+                  <label className="signup-label" htmlFor="name">
                     Last Name:
                   </label>
                 </div>
                 <div className="input-field">
-                  <i className="material-icons prefix">email</i>
+                  <i className="sign material-icons prefix">email</i>
                   <input
                     name="email"
                     htmlFor="email"
@@ -71,12 +71,12 @@ class SignUpForm extends Component {
                     id="email"
                     onChange={this.props.handleInput}
                   />
-                  <label className="label" htmlFor="email">
+                  <label className="signup-label" htmlFor="email">
                     Email:
                   </label>
                 </div>
                 <div className="input-field">
-                  <i className="material-icons prefix">lock</i>
+                  <i className="sign material-icons prefix">lock</i>
                   <input
                     htmlFor="password"
                     onChange={this.props.handleInput}
@@ -84,22 +84,11 @@ class SignUpForm extends Component {
                     id="text"
                     type="text"
                   ></input>
-                  <label className="label" htmlFor="message">
+                  <label className="signup-label" htmlFor="message">
                     Password:
                   </label>
                 </div>
-                <div className="input-field">
-                  <i className="material-icons prefix">star</i>
-                  <textarea
-                    id="favorites"
-                    className="materialize-textarea"
-                    cols="20"
-                    rows="20"
-                  ></textarea>
-                  <label className="label" htmlFor="favorites">
-                    Name some of your favorite movies and television shows?
-                  </label>
-                </div>
+            
                 {/* SUBMIT BUTTON */}
                 <div className="btn-wrap">
                   <button

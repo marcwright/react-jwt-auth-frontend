@@ -161,9 +161,6 @@ class Profile extends Component {
                   >
                     Delete Your Profile
                   </button>
-                  <p className="login-message">
-                    Already a member? <a href="/login">Login</a>
-                  </p>
                 </div>
               </form>
             </div>

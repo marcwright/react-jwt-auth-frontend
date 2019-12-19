@@ -5,3 +5,23 @@
 .explore.row {
     margin-top: 5rem;
 }
+
+.explore-wrap {
+    background-image: radial-gradient(
+    to right bottom,
+    rgba(250, 250, 250, 0.901),
+    rgba(0, 53, 114, 0.801)
+     
+    )
+}
+
+.club.indigo-text.text-darken-4.signhead  {
+    margin: 0;
+    padding: 2rem 0;
+    padding-left: 2rem;
+    text-decoration: underline;
+}
+
+.btn.create-club-button {
+    margin-left: 2rem;
+}

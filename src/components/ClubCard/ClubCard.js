@@ -19,10 +19,10 @@ class ClubCard extends Component {
     
     return (
       
-            <div className="col m6 l2 zoom">
+            <div className="col m6 l2">
               <div className="card">
                 <div className="card-image waves-effect waves-block waves-light">
-                  <img className="activator" src={this.props.club.currentMovieURL} />
+                  <img className="activator zoom" src={this.props.club.currentMovieURL} />
                 </div>
                 <div className="card-content">
                   <span id='club-card-title' className="card-title activator">{this.props.club.title}<i class="material-icons right">more_vert</i></span>

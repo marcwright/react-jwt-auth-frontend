@@ -28,7 +28,7 @@ header {
   background-image: linear-gradient(
       to right bottom,
       rgba(82, 163, 255, 0.801),
-      rgba(0, 27, 77, 0.901)
+      hsla(219, 100%, 15%, 0.902)
     ),
     url(./background.jpg);
 
