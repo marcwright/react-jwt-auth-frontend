@@ -26,7 +26,7 @@ class ClubCard extends Component {
                 </div>
                 <div className="card-content">
                   <span id='club-card-title' className="card-title activator">{this.props.club.title}<i class="material-icons right">more_vert</i></span>
-                  <p><a href="/CreateThread"><i className="material-icons red-text text-darken-1">remove_red_eye</i></a></p>
+                  <p onClick={this.storeClubID}><a href="/CreateThread"><i className="material-icons red-text text-darken-1">remove_red_eye</i></a></p>
                   </div>
                   <div class="card-reveal">
               <span className="card-title grey-text text-darken-4">{this.props.club.title}<i className="material-icons right">close</i></span>

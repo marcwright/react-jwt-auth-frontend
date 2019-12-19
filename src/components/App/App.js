@@ -182,6 +182,7 @@ class App extends Component {
               render={props => {
                 return (
                   <Profile
+                  databaseUrl={databaseUrl}
                     isLoggedIn={this.state.isLoggedIn}
                     user={this.state.user}
                   />

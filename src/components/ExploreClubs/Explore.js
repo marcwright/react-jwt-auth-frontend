@@ -11,7 +11,7 @@ class Explore extends Component {
   };
 
   componentDidMount() {
-    window.localStorage.setItem("clubID", "")
+    // window.localStorage.setItem("clubID", "")
     this.getClubs();
   }
 
