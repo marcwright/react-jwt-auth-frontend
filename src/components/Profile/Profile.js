@@ -15,28 +15,28 @@ class Profile extends Component {
 
   componentDidMount() {
     this.getLoggedInUser();
-    // this.getUserClubs();
+    this.getUserClubs();
   }
 
-  // getUserClubs = () => {
-  //   if (this.state.user) {
-  //     this.state.user.clubs.forEach(club => {
-  //       console.log(club)
-  //       console.log(`${this.props.databaseUrl}/api/users/${club}`)
-  //       // axios({
-  //       //   method: "get",
-  //       //   url: `${this.props.databaseUrl}/api/users/${club}`
-  //       // })
+  getUserClubs = () => {
+    if (this.state.user) {
+      this.state.user.clubs.forEach(club => {
+        console.log(club)
+        console.log(`${this.props.databaseUrl}/api/users/${club}`)
+        // axios({
+        //   method: "get",
+        //   url: `${this.props.databaseUrl}/api/users/${club}`
+        // })
         
-  //       // .then(response => {
-  //       //   this.setState((prevState, currentState) => {
-  //       //     clubs: [...prevState.clubs, ...response]
-  //       //   })
-  //       // })
-  //     })
-  //   }
+        // .then(response => {
+        //   this.setState((prevState, currentState) => {
+        //     clubs: [...prevState.clubs, ...response]
+        //   })
+        // })
+      })
+    }
     
-  // }
+  }
 
   getLoggedInUser = () => {
     console.log(
