@@ -1,6 +1,11 @@
 
 .thread.row {
-    width: 100%;
-    margin-top: 5rem;
+    width: 20%;
+    margin-right: 20rem;
 
 }
+
+.thread.card.horizontal {
+    width: 174%;
+}
+

@@ -14,7 +14,6 @@ import Thread from "../Thread/Thread";
 import "./App.css";
 import ThreadGallery from "../ThreadGallery/ThreadGallery";
 import CreateThread from "../CreateThread/CreateThread";
-import Tilt from 'react-vanilla-tilt'
 
 const databaseUrl =
   process.env.NODE_ENV === "production"

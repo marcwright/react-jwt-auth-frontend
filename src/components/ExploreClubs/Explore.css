@@ -1,6 +1,4 @@
-/* #club-title {
-    
-} */
+
 
 .explore.row {
     margin-top: 5rem;
@@ -25,7 +23,7 @@
     padding: 2rem 0;
     padding-left: 2rem;
     text-decoration: underline;
-    color: rgb(101, 158, 206);
+    color: #024C8A !important;
 }
 
 .btn.create-club-button {

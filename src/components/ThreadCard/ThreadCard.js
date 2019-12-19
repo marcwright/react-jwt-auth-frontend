@@ -24,11 +24,10 @@ class ThreadCard extends Component {
 
 
 
-                <div class="thread-wrap col s12 m7">
-                <h2 class="header">Horizontal Card</h2>
-                <div class="card horizontal">
-                  <div class="card-image">
-                  <a href='/Thread'onClick={(event) => {this.setLocalStorage(event)}}><img src={this.props.movieData.thumbnailURL} alt="" /></a>
+                <div class="thread-wrap col s12 m4 l12">
+                <div class="thread card horizontal">
+                  <div id='thread-image'class="thread card-image">
+
                   </div>
                   <div class="card-stacked">
                     <div class="card-content">
