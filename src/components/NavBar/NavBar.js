@@ -8,6 +8,7 @@ class NavBar extends Component {
     let navBarItems = []
     if (this.props.isLoggedIn) {
       navBarItems.push(<NavItem key={2} href='/logout'>LOG OUT</NavItem>, <NavItem key={4} href="/profile"><i className="material-icons prefix">account_circle</i></NavItem>)
+      navBarItems.push(<NavItem key={7} href='/explore'>CLUBS</NavItem>)
       if (this.props.user != null) {
         navBarItems.push(<NavItem key={5} href='/profile'>{this.props.user.email}</NavItem>)
       }
@@ -17,7 +18,6 @@ class NavBar extends Component {
       navBarItems.push(<NavItem key={6} href='/login'>LOG IN</NavItem>)
       navBarItems.push(<NavItem key={7} href='/explore'>CLUBS</NavItem>)
       navBarItems.push(<NavItem key={8} href="/explore">MOVIES</NavItem>)
-      navBarItems.push()
     }
     return (
       <Navbar brand='FILM CLUB' className='nav logo' right>
