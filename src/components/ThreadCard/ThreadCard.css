@@ -1,4 +1,4 @@
-.thread.card-content {
+/* .thread.card-content {
     color: white;
 }
 
@@ -6,4 +6,8 @@
 
 .zoom {
     margin: 1rem auto;
+} */
+
+div.thread-wrap {
+    width: 25%;
 }

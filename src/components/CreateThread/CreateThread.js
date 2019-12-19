@@ -57,7 +57,7 @@ class CreateThread extends Component {
           <div>
             <i id='thread-icon' class="material-icons prefix">stars</i>
             <label htmlFor='password'>Title:</label>
-            <input name="password" type='text' name='password' onChange={event => this.handleInput(event)} />
+            <input name="password" type='text' name='title' onChange={event => this.handleInput(event)} />
           </div>
 
           <div className="text-area-wrap">
@@ -72,7 +72,9 @@ class CreateThread extends Component {
             onClick={event => this.handleCreateThread(event)}
           />
         </form>
+        <div className='row'>
         <ThreadGallery databaseUrl={this.props.databaseUrl}/>
+        </div>
       </div>
     );
   }
