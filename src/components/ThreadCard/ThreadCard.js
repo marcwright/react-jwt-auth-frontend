@@ -33,8 +33,10 @@ class ThreadCard extends Component {
                     <div class="card-content">
                     <span className="card-title">{this.props.movieData.title}</span>
                       <p>{this.props.movieData.prompt}</p>
+                      
                     </div>
                     <div class="card-action">
+                    
                       <a href="/thread" onClick={(event) => {this.setLocalStorage(event)}}><i class="material-icons">arrow_forward</i></a>
                     </div>
                   </div>

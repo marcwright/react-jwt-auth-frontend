@@ -15,6 +15,7 @@ import "./App.css";
 import ThreadGallery from "../ThreadGallery/ThreadGallery";
 import CreateThread from "../CreateThread/CreateThread";
 
+
 const databaseUrl =
   process.env.NODE_ENV === "production"
     ? process.env.BACKEND_APP_URL

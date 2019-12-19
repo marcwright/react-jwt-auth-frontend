@@ -24,7 +24,7 @@ class ClubCard extends Component {
             
               <div  className="card" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500" >
                 <div className="card-image waves-effect waves-block waves-light" >
-                  <img className="activator zoom" src={this.props.club.currentMovieURL} />
+                  <img className="activator zoom" src={this.props.club.thumbnailURL} />
                 </div>
                 <div className="card-content">
                   <span id='club-card-title' className="card-title activator">{this.props.club.title}<i class="material-icons right">more_vert</i></span>
