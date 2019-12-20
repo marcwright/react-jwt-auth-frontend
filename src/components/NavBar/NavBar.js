@@ -6,8 +6,9 @@ class NavBar extends Component {
   render() {
     let navBarItems = [
       <NavItem key={1} href="/">
-        Home
-      </NavItem>
+       Home
+        </NavItem>
+      
     ];
     if (this.props.isLoggedIn) {
       navBarItems.push(
@@ -34,13 +35,13 @@ class NavBar extends Component {
     );
   }
 
-  // newMethod(navBarItems) {
-  //   if (this.props.isLoggedIn) {
-  //     navBarItems.push(
-  //       <NavItem key={6} href="/letsPlay">
-  //       </NavItem>
-  //     );
-  //   }
-  // }
+  newMethod(navBarItems) {
+    if (this.props.isLoggedIn) {
+      navBarItems.push(
+        <NavItem key={6} href="/letsPlay">
+        </NavItem>
+      );
+    }
+  }
 }
 export default NavBar;

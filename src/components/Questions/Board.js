@@ -4,23 +4,44 @@ import { Button } from 'react-bootstrap/Button';
 // import Col from 'react-bootstrap/Col'
 // import Row from 'react-bootstrap/Row'
 import { Container, Row, Col } from "react-bootstrap";
+import LogInForm from '../LogInForm/LogInForm'
+import axios from 'axios'
 
-
+const databaseUrl = 
+  process.env.NODE_ENV === "production"
+    ? process.env.REACT_APP_BACKEND_APP_URL
+    : "http://localhost:3000";
 
  
 class Board extends Component {
 		state = {
 			Row: "",
-			col: ""
+			col: "",
+			newGame: ""
 		}
-			
+		getNewGame= e => {
+			e.preventDefault();
+			let id = this.state.getNewGame.id;
+			let intId = Number(id);
+			console.log(intId)
+			axios({
+			  url: `${databaseUrl}/newGame/${intId}`,
+			  method: "get",
+			  data: { getNewGame: this.state.getNewGame }
+			}).then(response => {
+			  
+			  this.setState(prevState => ({
+				newGame: [...prevState.game, response.data.game]
+			  }));
+			});
+		  };
 
 
       
  render() {
 	return(
    
-//    
+   
 <div>
 <Container> 
 	<Row>
@@ -72,11 +93,10 @@ class Board extends Component {
 		<Col>$1000</Col>
 	</Row>
 	 </Container> 
-	
+
 	</div>
  )}
+ 
 }
-
-
 
 export default Board

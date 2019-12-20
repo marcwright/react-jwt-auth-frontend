@@ -1,17 +1,21 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./LogInForm.css";
+import LandingPage from "../LogInForm/LandingPage";
 
+const databaseUrl =
+  process.env.NODE_ENV === "production"
+    ? process.env.REACT_APP_BACKEND_APP_URL
+    : "http://localhost:3000";
 
 class LogInForm extends Component {
   render() {
     return (
       <div>
-        <h1>Personal Jeopardy</h1>
         <Container>
           <Row>
-            <Col>
-              <h2>Sign Up</h2>
+             <Col>
+             <h2>Sign Up</h2>
               <form>
                 <div>
                   <label htmlFor="email">Email</label>
@@ -30,18 +34,27 @@ class LogInForm extends Component {
                   />
                 </div>
                 <input
+                  onChange={this.props.handleInput}
                   value="Submit"
                   type="Submit"
-                  onClick={this.props.handleLogIn}
+                  onChange={e => this.onHandleChange(e)}
+                /> 
+                 {/* <input
+                  value="New Game"
+                  type="New Game"
+                  onClick={e => this.handleInput(e)}
                 />
-                 {/* <input value='Continue Play' type='ContinuePlay' onClick={this.props.handleLogIn} />
-          <input value='History' type='History' onClick={this.props.handleLogIn} /> */}
+                <input
+                  value="History"
+                  type="History"
+                  onClick={e => this.handleInput(e)}
+                /> */}
               </form>
             </Col>
             <Col>
-            <form>
-              <h2>Log In</h2>
-              <div>
+              <form>
+                <h2>Log In</h2>
+                <div>
                   <label htmlFor="email">Email</label>
                   <input
                     type="text"
@@ -57,16 +70,18 @@ class LogInForm extends Component {
                     onChange={this.props.handleInput}
                   />
                 </div>
+
                 <input
                   value="Submit"
                   type="Submit"
-                  onClick={this.props.handleLogIn}
-                />
-                </form>
-              <form>
-                 {/* <input value='Log Out' type='submit' onClick={this.props.handleLogOut} /> */}
+                  onSubmit={this.LogInForm}
+                  onChange={e => this.onHandleChange(e)}
+                ></input>
               </form>
-            </Col>
+              <form>
+                {/* <input value='Log Out' type='submit' onClick={this.props.handleLogOut} /> * */}
+              </form>
+          </Col>
           </Row>
         </Container>
       </div>

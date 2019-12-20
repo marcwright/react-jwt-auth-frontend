@@ -1,47 +1,77 @@
 import React, { Component } from "react";
 import axios from "axios";
-const serverUrl = "http://opentdb.com/api.php?amount=10";
+import LogInForm from "../LogInForm/LogInForm";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+// const serverUrl = "http://opentdb.com/api.php?amount=10";
+const databaseUrl =
+  process.env.NODE_ENV === "production"
+    ? process.env.REACT_APP_BACKEND_APP_URL
+    : "http://localhost:3000/api/questions/new";
+
+    
 
 class Question extends Component {
   constructor(props) {
     super();
     this.state = {
       Url: [],
-      question: ""
+      questions: "",
+      answers: ""
     };
   }
   componentDidMount() {
     this.callAxios();
   }
+
+  handleInput = e => {
+      this.setState({
+        [e.target.name]: e.target.value
+      })
+    }
   callAxios() {
     axios({
-      url: serverUrl,
-      method: "get"
+      url: databaseUrl,
+      method: "post"
     }).then(response => {
       this.setState({
-        Url: response.data.question
-      });
-      let questionArray = this.state.serverUrl((question, index) => {
-        return question;
-      });
-      console.log("question");
-      // console.log(response.data.question);
-      // let randomGen = Math.floor(Math.random() * questionArray.length);
-      this.setState({
-        // question: question
-      });
-      console.log('question');
-    });
-  }
+        databaseUrl: response.question
+      })
+      
+      })
+      // handleChange = e => {
+      // }
+      // getQuestions = () => {
+      //   axios({
+      //     url: databaseUrl,
+      //     method: "get"
+      //   }).then(response => {
+      //     this.setState({
+      //       Questions: response.data.Questions
+      //     });
+      //   });
+      // };
+    
+      // getAnswers = () => {
+      //   axios({
+      //     url: databaseUrl,
+      //     method: "get"
+      //   }).then(response => {
+      //     this.setState({
+      //       owners: response.data.answers
+      //     });
+      //   });
+      // };
 
-  render() {
+  
     return (
       <div>
-        <h1>Personal xJeopardy</h1>
+        <h1>Personal Jeopardy</h1>
+        <h2>{this.props.board}</h2>
       </div>
+      
     );
-  }
+  
+ }
 }
 export default Question;
-
-
