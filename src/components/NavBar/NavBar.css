@@ -1,4 +1,12 @@
+body {
+    background: blue;
+    
+}
 .nav {
-    background: green;
+    background: gold;
     padding: 0 2% 0 2%;
+    text-align: center;
+    
+    
+
 }
