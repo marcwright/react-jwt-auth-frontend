@@ -24,7 +24,7 @@ class ThreadCard extends Component {
 
 
 
-                <div class="thread-wrap col s12 m4 l12">
+                <div class="thread">
                 <div class="thread card horizontal">
                   <div id='thread-image'class="thread card-image">
 

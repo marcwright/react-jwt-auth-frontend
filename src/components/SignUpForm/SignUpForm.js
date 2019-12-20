@@ -12,8 +12,8 @@ class SignUpForm extends Component {
                 Let the show begin...
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.
+                Welcome to our movie club app. Please take a moment to create an account (It's free!).
+                After you have created an account
               </p>
               <p>
                 Mauris dolor augue, vulputate in pharetra ac, facilisis nec

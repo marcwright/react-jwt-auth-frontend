@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import ThreadGallery from '../ThreadGallery/ThreadGallery.js';
+import ThreadGallery from "../ThreadGallery/ThreadGallery.js";
 import "./CreateThread.css";
 import axios from "axios";
 
 class CreateThread extends Component {
-
   state = {
     title: "",
     prompt: ""
-  }
+  };
 
   handleCreateThread = event => {
     event.preventDefault();
@@ -25,7 +24,7 @@ class CreateThread extends Component {
       console.log(response);
     });
   };
-  
+
   handleInput = event => {
     this.setState({
       [event.target.name]: event.target.value
@@ -36,36 +35,53 @@ class CreateThread extends Component {
     this.setState({
       [event.target.name]: event.target.value
     });
-    console.log(this.state)
-  }
+    console.log(this.state);
+  };
 
   render() {
-   
-    console.log(window.localStorage)
+    console.log(window.localStorage);
     return (
       <div className="create-thread-wrap">
-        <form action="/action_page.php" id="usrform">
-          <div>
-            <i id='thread-icon' class="material-icons prefix">stars</i>
-            <label htmlFor='password'>Title:</label>
-            <input name="password" type='text' name='title' onChange={event => this.handleInput(event)} />
-          </div>
+        <div className="row">
+          
+            <form action="/action_page.php" id="usrform">
+              
+                <i id="thread-icon" class="material-icons prefix">
+                  stars
+                </i>
+                <label htmlFor="password">Title:</label>
+                <input
+                  name="password"
+                  type="text"
+                  name="title"
+                  onChange={event => this.handleInput(event)}
+                />
+            
 
-          <div className="text-area-wrap">
-            <textarea className="text-area" name="prompt" form="usrform" onChange={event => this.handleInput(event)}>
-              Start a discussion...
-            </textarea>
+              <div className="text-area-wrap">
+                <textarea
+                  className="text-area"
+                  name="prompt"
+                  form="usrform"
+                  onChange={event => this.handleInput(event)}
+                >
+                  Start a discussion...
+                </textarea>
+              </div>
+              <input
+                id="thread-btn"
+                className="btn waves-effect waves-light"
+                type="submit"
+                onClick={event => this.handleCreateThread(event)}
+              />
+            </form>
           </div>
-          <input
-            id="thread-btn"
-            className="btn waves-effect waves-light"
-            type="submit"
-            onClick={event => this.handleCreateThread(event)}
-          />
-        </form>
-        <div className='row'>
-        <ThreadGallery databaseUrl={this.props.databaseUrl}/>
-        </div>
+          
+            
+              <ThreadGallery databaseUrl={this.props.databaseUrl} />
+           
+          
+        
       </div>
     );
   }
