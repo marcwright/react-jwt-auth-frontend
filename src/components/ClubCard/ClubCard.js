@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
 
 import {
   BrowserRouter as Router,
@@ -8,10 +9,14 @@ import {
   withRouter
 } from "react-router-dom";
 import CreateThread from "../CreateThread/CreateThread";
+=======
+// import image from "./curry.jpg";
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
 import "./ClubCard.css";
 import "materialize-css/dist/css/materialize.min.css";
 
 class ClubCard extends Component {
+<<<<<<< HEAD
   state = {};
 
   storeClubID = () => {
@@ -81,6 +86,47 @@ class ClubCard extends Component {
           </div>
         </div>
       </div>
+=======
+  state = { selectedClub: "" };
+  render() {
+    console.log(this.props.club);
+    return (
+
+      <div className="col m6 l2">
+        <div className="card">
+          <div className="card-image">
+            <img src={this.props.club.currentMovieURL} alt="" />
+          </div>
+          <div className="card-content">
+            <span className="card-title">{this.props.club.title}</span>
+            <p>{this.props.club.currentTopic}</p>
+          </div>
+          <div className="card-action">
+            <a
+              className="link"
+              href="/ThreadGallery"
+              alt="test"
+              onClick={() => this.props.passProps(this.props.club)}
+            >
+              <i className="material-icons right">arrow_forward</i>
+            </a>
+            <a className="link" href="https://google.com" alt="test">
+              <i className="material-icons right">add_circle</i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      
+        
+
+  
+           
+          
+        
+      
+
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
     );
   }
 }

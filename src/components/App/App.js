@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, withRouter, Router } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import axios from "axios";
 import "materialize-css/dist/css/materialize.min.css";
 import NavBar from "../NavBar/NavBar";
@@ -29,7 +29,8 @@ class App extends Component {
     lastName: "",
     email: "",
     isLoggedIn: false,
-    user: null
+    user: null,
+    selectedClub: ""
   };
 
   componentDidMount() {
@@ -63,6 +64,12 @@ class App extends Component {
     //   })
     // }
   }
+  // function to lift up state
+  passProps = selectedClub => {
+    this.setState({
+      selectedClub: selectedClub
+    });
+  };
 
   handleLogOut = e => {
     e.preventDefault();
@@ -79,7 +86,11 @@ class App extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
+<<<<<<< HEAD
     console.log(this.state)
+=======
+    console.log(this.state);
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
   };
 
   handleSignUp = e => {
@@ -121,7 +132,11 @@ class App extends Component {
       .then(response => {
         console.log(response);
         window.localStorage.setItem("token", response.data.token);
+<<<<<<< HEAD
         window.localStorage.setItem("userID", response.data.user._id)
+=======
+        window.localStorage.setItem("userID", response.data.user._id);
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
         this.setState({
           isLoggedIn: true,
           user: response.data.user,
@@ -138,6 +153,7 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state.selectedClub);
     return (
       <div>
         <NavBar isLoggedIn={this.state.isLoggedIn} user={this.state.user} />
@@ -166,6 +182,12 @@ class App extends Component {
                 );
               }}
             />
+            {/* <Route
+              path="/MovieSearch"
+              render={props => {
+                return <MovieSearch isLoggedIn={this.state.isLoggedIn} />;
+              }}
+            /> */}
             <Route
               path="/login"
               render={props => {
@@ -191,25 +213,49 @@ class App extends Component {
               }}
             />
             <Route exact path="/" component={Landing} />
-
+            // has data that needs to be passed
             <Route
               path="/explore"
-              component={() => <Explore databaseUrl={databaseUrl} />}
+              component={() => (
+                <Explore passProps={this.passProps} databaseUrl={databaseUrl} />
+              )}
             />
             <Route
               path="/CreateClub"
-              component={() => <CreateClub databaseUrl={databaseUrl} />}
+              component={() => (
+                <CreateClub
+                  searchTerm={this.state.searchTerm}
+                  databaseUrl={databaseUrl}
+                  isLoggedIn={this.state.isLoggedIn}
+                  handleInput={this.handleInput}
+                  user={this.state.user}
+                  handleMovieSearchInput={this.handleMovieSearchInput}
+                  searchMovie={this.searchMovie}
+                />
+              )}
             />
             <Route
               path="/Thread"
-              component={Thread}
               component={() => <Thread databaseUrl={databaseUrl} />}
             />
+<<<<<<< HEAD
             {/* <Route
               path="/ThreadGallery"
               component={ThreadGallery}
               component={() => <ThreadGallery databaseUrl={databaseUrl} />}
             /> */}
+=======
+            // needs to be passed the selected Club
+            <Route
+              path="/ThreadGallery"
+              component={() => (
+                <ThreadGallery
+                  databaseUrl={databaseUrl}
+                  selectedClub={this.state.selectedClub}
+                />
+              )}
+            />
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
             <Route
               path="/CreateThread"
               component={CreateThread}

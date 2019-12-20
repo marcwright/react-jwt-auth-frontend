@@ -21,23 +21,40 @@ class SignUpForm extends Component {
                 ornare nec.
               </p>
             </div>
+<<<<<<< HEAD
             {/* SIGN UP htmlForM */}
             <div className="col s12 l5 offset-l2 htmlForm-wrap">
               <form className='signup-form'>
                 <div className="input-field">
                   <i className="sign material-icons prefix">account_circle</i>
+=======
+
+            {/* SIGN UP htmlForM */}
+            <div className="col s12 l5 offset-l2 htmlForm-wrap">
+              <form>
+                <div className="input-field">
+                  <i className="material-icons prefix">account_circle</i>
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
                   <input
                     name="username"
                     type="text"
                     id="text"
                     onChange={this.props.handleInput}
                   />
+<<<<<<< HEAD
                   <label className="signup-label" htmlFor="name">
+=======
+                  <label className="label" htmlFor="name">
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
                     Username:
                   </label>
                 </div>
                 <div className="input-field">
+<<<<<<< HEAD
                   <i className="sign material-icons prefix">contacts</i>
+=======
+                  <i className="material-icons prefix">contacts</i>
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
                   <input
                     name="firstName"
                     htmlFor="firstName"
@@ -45,12 +62,20 @@ class SignUpForm extends Component {
                     id="text"
                     onChange={this.props.handleInput}
                   />
+<<<<<<< HEAD
                   <label className="sign signup-label" htmlFor="firstName">
+=======
+                  <label className="label" htmlFor="firstName">
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
                     First Name:
                   </label>
                 </div>
                 <div className="input-field">
+<<<<<<< HEAD
                   <i className="sign material-icons prefix">contacts</i>
+=======
+                  <i className="material-icons prefix">contacts</i>
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
                   <input
                     name="lastName"
                     htmlFor="lastName"
@@ -58,12 +83,20 @@ class SignUpForm extends Component {
                     id="text"
                     onChange={this.props.handleInput}
                   />
+<<<<<<< HEAD
                   <label className="signup-label" htmlFor="name">
+=======
+                  <label className="label" htmlFor="name">
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
                     Last Name:
                   </label>
                 </div>
                 <div className="input-field">
+<<<<<<< HEAD
                   <i className="sign material-icons prefix">email</i>
+=======
+                  <i className="material-icons prefix">email</i>
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
                   <input
                     name="email"
                     htmlFor="email"
@@ -71,6 +104,7 @@ class SignUpForm extends Component {
                     id="email"
                     onChange={this.props.handleInput}
                   />
+<<<<<<< HEAD
                   <label className="signup-label" htmlFor="email">
                     Email:
                   </label>
@@ -89,6 +123,38 @@ class SignUpForm extends Component {
                   </label>
                 </div>
             
+=======
+                  <label className="label" htmlFor="email">
+                    Email:
+                  </label>
+                </div>
+                <div className="input-field">
+                  <i className="material-icons prefix">lock</i>
+                  <input
+                    htmlFor="password"
+                    onChange={this.props.handleInput}
+                    name="password"
+                    id="text"
+                    type="text"
+                  ></input>
+                  <label className="label" htmlFor="message">
+                    Password:
+                  </label>
+                </div>
+                <div className="input-field">
+                  <i className="material-icons prefix">star</i>
+                  <textarea
+                    id="favorites"
+                    className="materialize-textarea"
+                    cols="20"
+                    rows="20"
+                  ></textarea>
+                  <label className="label" htmlFor="favorites">
+                    Name some of your favorite movies and television shows?
+                  </label>
+                </div>
+
+>>>>>>> c3fea99fcf9be2ef365bf006f4e8ae477f271aa6
                 {/* SUBMIT BUTTON */}
                 <div className="btn-wrap">
                   <button
