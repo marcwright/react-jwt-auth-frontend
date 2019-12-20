@@ -16,29 +16,19 @@ class LogInForm extends Component {
           <Row>
              <Col>
              <h2>Sign Up</h2>
-              <form>
-                <div>
-                  <label htmlFor="email">Email</label>
-                  <input
-                    type="text"
-                    name="email"
-                    onChange={this.props.handleInput}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="password">Password</label>
-                  <input
-                    type="text"
-                    name="password"
-                    onChange={this.props.handleInput}
-                  />
-                </div>
-                <input
-                  onChange={this.props.handleInput}
-                  value="Submit"
-                  type="Submit"
-                  onChange={e => this.onHandleChange(e)}
-                /> 
+              
+            <form>
+              <div>
+                <label htmlFor='email'>Email</label>
+                <input type='text' name='email' onChange={this.props.handleInput} />
+              </div>
+
+              <div>
+                <label htmlFor='password'>Password</label>
+                <input type='text' name='password' onChange={this.props.handleInput} />
+              </div>
+              <input value='Submit' type='submit' onClick={this.props.handleSignUp} />
+            </form>
                  {/* <input
                   value="New Game"
                   type="New Game"
@@ -49,7 +39,6 @@ class LogInForm extends Component {
                   type="History"
                   onClick={e => this.handleInput(e)}
                 /> */}
-              </form>
             </Col>
             <Col>
               <form>
@@ -71,15 +60,7 @@ class LogInForm extends Component {
                   />
                 </div>
 
-                <input
-                  value="Submit"
-                  type="Submit"
-                  onSubmit={this.LogInForm}
-                  onChange={e => this.onHandleChange(e)}
-                ></input>
-              </form>
-              <form>
-                {/* <input value='Log Out' type='submit' onClick={this.props.handleLogOut} /> * */}
+                <input value='Submit' type='submit' onClick={this.props.handleLogIn} />
               </form>
           </Col>
           </Row>

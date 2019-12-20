@@ -19,22 +19,7 @@ class Board extends Component {
 			col: "",
 			newGame: ""
 		}
-		getNewGame= e => {
-			e.preventDefault();
-			let id = this.state.getNewGame.id;
-			let intId = Number(id);
-			console.log(intId)
-			axios({
-			  url: `${databaseUrl}/newGame/${intId}`,
-			  method: "get",
-			  data: { getNewGame: this.state.getNewGame }
-			}).then(response => {
-			  
-			  this.setState(prevState => ({
-				newGame: [...prevState.game, response.data.game]
-			  }));
-			});
-		  };
+		
 
 
       

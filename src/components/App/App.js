@@ -29,85 +29,131 @@ class App extends Component {
     Question: "",
     Answers: ""
   };
+ 
+  handleLogIn = (e) => {
+    e.preventDefault()
+    console.log('hello')
+    let loginUser = {
+      email: this.state.email,
+      password: this.state.password
+    }
+    axios(
+      {
+        method: 'post',
+        url: `${databaseUrl}/api/users/login`,
+        data: loginUser
+      })
+      .then(response => {
+        console.log(response)
+        window.localStorage.setItem('token', response.data.token)
+        this.setState({
+          isLoggedIn: true,
+          user: response.data.user,
+          email: '',
+          password: ''
+        })
+        const location = {
+          pathname: '/profile',
+          state: { fromDashboard: true }
+        }
+        this.props.history.replace(location)
+      })
+      .catch(err => console.log(err))
+  }
 
-  // componentDidMount() {
-  //   if (localStorage.token) {
-  //     this.setState({
-  //       isLoggedIn: true
-  //     });
-  //   } else {
-  //     this.setState({
-  //       isLoggedIn: false
-  //     });
-  //   }
-  // if (localStorage.token) {
-  //   axios(
-  //     {
-  //       method: 'post',
-  //       url: `${databaseUrl}/api/users`,
-  //       headers: { Authorization: `Bearer ${localStorage.token}` }
-  //     })
-  //     .then(response => {
-  //       this.setState({
-  //         isLoggedIn: true,
-  //         user: response.data.user
-  //       })
-  //       this.props.history.push('/profile')
-  //     })
-  //     .catch(err => console.log(err))
-  // } else {
-  //   this.setState({
-  //     isLoggedIn: false
-  //   })
-  // }
-  // }
-
-  // handleLogOut = e => {
-  //   e.preventDefault();
-  //   window.localStorage.clear();
-  //   this.setState({
-  //     email: "",
-  //     password: "",
-  //     isLoggedIn: false
-  //   });
-  //   this.props.history.push("/login");
-  // };
-
-  // handleInput = e => {
-  //   this.setState({
-  //     [e.target.name]: e.target.value
-  //   });
-  // };
-
-  // handleSignUp = e => {
-  //   e.preventDefault();
-  //   let newUser = {
-  //     email: this.state.email,
-  //     password: this.state.password,
-  //     question: this.state.question
-  //   }; };
-
-  getQuestions = () => {
-    axios({
-      url: databaseUrl,
-      method: "get"
-    }).then(response => {
+  componentDidMount() {
+    if (localStorage.token) {
       this.setState({
-        Questions: response.data.Questions
+        isLoggedIn: true
       });
+    } else {
+      this.setState({
+        isLoggedIn: false
+      });
+    }
+  if (localStorage.token) {
+    axios(
+      {
+        method: 'post',
+        url: `${databaseUrl}/api/users`,
+        headers: { Authorization: `Bearer ${localStorage.token}` }
+      })
+      .then(response => {
+        this.setState({
+          isLoggedIn: true,
+          user: response.data.user
+        })
+        this.props.history.push('/profile')
+      })
+      .catch(err => console.log(err))
+  } else {
+    this.setState({
+      isLoggedIn: false
+    })
+  }
+  }
+
+  handleLogOut = e => {
+    e.preventDefault();
+    window.localStorage.clear();
+    this.setState({
+      email: "",
+      password: "",
+      isLoggedIn: false
+    });
+    this.props.history.push("/login");
+  };
+
+  handleInput = e => {
+    this.setState({
+      [e.target.name]: e.target.value
     });
   };
 
-  getAnswers = () => {
-    axios({
-      url: databaseUrl,
-      method: "get"
-    }).then(response => {
-      this.setState({
-        owners: response.data.answers
-      });
-    });
-  };
+  handleSignUp = (e) => {
+    e.preventDefault()
+    let newUser = {
+      email: this.state.email,
+      password: this.state.password
+    }
+    axios(
+      {
+        method: 'post',
+        url: `${databaseUrl}/api/users/signup`,
+        data: newUser
+      })
+      .then(response => {
+        console.log(response)
+        const location = {
+          pathname: '/login',
+          state: { fromDashboard: true }
+        }
+        this.props.history.replace(location)
+      })
+      .catch(err => console.log(err))
+  }
+
+  // getQuestions = () => {
+  //   axios({
+  //     url: databaseUrl,
+  //     method: "get"
+  //   }).then(response => {
+  //     this.setState({
+  //       Questions: response.data.Questions
+  //     });
+  //   });
+  // };
+
+  // getAnswers = () => {
+  //   axios({
+  //     url: databaseUrl,
+  //     method: "get"
+  //   }).then(response => {
+  //     this.setState({
+  //       owners: response.data.answers
+  //     });
+  //   });
+  // };
 
   render() {
     return (
@@ -116,13 +162,14 @@ class App extends Component {
         <div className="body">
           <Switch>
             <Route
-              path="/signup"
+              path="/"
               render={props => {
                 return (
                   <LogInForm
                     isLoggedIn={this.state.isLoggedIn}
                     handleInput={this.handleInput}
                     handleLogIn={this.handleLogIn}
+                    handleSignUp={this.handleSignUp}
                   />
                 );
               }}
@@ -163,18 +210,18 @@ class App extends Component {
               }}
             />
              <Route
-              path="/Board"
+              path="Question/Board"
               render={props => {
                 return (
                   <Board
                     isLoggedIn={this.state.isloggedin}
-                    handleInput={this.state.Board}
+                    handleInput={this.state.handleInput}
                   />
                 );
               }}
             />
             <Route
-              path="/questions"
+              path="Question/questions"
               render={props => {
                 return (
                   <Question

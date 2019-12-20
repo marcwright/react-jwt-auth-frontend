@@ -52,23 +52,36 @@ class Question extends Component {
       //   });
       // };
     
-      // getAnswers = () => {
-      //   axios({
-      //     url: databaseUrl,
-      //     method: "get"
-      //   }).then(response => {
-      //     this.setState({
-      //       owners: response.data.answers
-      //     });
-      //   });
-      // };
+      // getQuestions = () => {
 
-  
+
+       
+    axios({
+      url: databaseUrl,
+      method: "get"
+    }).then(response => {
+      this.setState({
+        Questions: response.data.Questions
+      });
+    });
+  };
+
+  getAnswers = () => {
+    axios({
+      url: databaseUrl,
+      method: "get"
+    }).then(response => {
+      this.setState({
+        owners: response.data.answers
+      });
+    });
+  };
+
+  render(){
     return (
       <div>
         <h1>Personal Jeopardy</h1>
-        <h2>{this.props.board}</h2>
-      </div>
+        </div>
       
     );
   

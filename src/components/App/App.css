@@ -1,6 +1,7 @@
 body {
   margin: 3%;
   text-align: center;
+  font-family: sans-serif;
   
 
 }
@@ -12,3 +13,13 @@ body {
   background-attachment: fixed;
   background-size: 125%;
   }
+
+   nav {
+     font-family: 'Times New Roman', Times, serif;
+     background-color: blue;
+     border-bottom-left-radius: 32px;
+     border-top-right-radius: 32px;
+     border-top-left-radius: 32px;
+     border-bottom-right-radius: 32px;
+   }
+   
