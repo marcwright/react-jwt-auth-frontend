@@ -1,0 +1,48 @@
+
+
+div.text-area-wrap {
+  
+  margin: 0;
+}
+
+.text-area {
+  
+  
+  height: 25vh;
+  font-size: 2rem;
+  background-color: rgb(250, 250, 250);
+  margin-bottom: 1rem;
+}
+
+#thread-btn {
+  background-color: #024c8a;
+}
+
+
+
+.btn {
+  background-color: #024c8a;
+}
+
+
+
+
+i#thread-icon {
+  color: rgb(0, 32, 177);
+}
+
+form#usrform {
+  width: 40%;
+  margin-left: 27%;
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+div.thread.row {
+  margin-left:30%;
+}
+
+div.create-thread-wrap {
+  text-align: center;
+}

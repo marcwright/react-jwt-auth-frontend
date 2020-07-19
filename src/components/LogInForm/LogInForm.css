@@ -1,0 +1,23 @@
+
+
+.form-login-wrap {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.login-header {
+    color: #024c8a;
+    margin-top: 10rem;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+div.log.btn-wrap {
+    width: 100%;
+}
+
+.log.btn.sign {
+    margin-left: 5.5rem;
+}

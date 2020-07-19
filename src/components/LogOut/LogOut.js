@@ -6,7 +6,7 @@ class LogOut extends Component {
   render() {
     return (
       <div>
-        <h2>Log Out</h2>
+        <h3>Log Out</h3>
 
         <form>
           <input value='Log Out' type='submit' onClick={this.props.handleLogOut} />
